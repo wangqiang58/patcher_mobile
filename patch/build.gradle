@@ -1,11 +1,11 @@
 apply plugin: 'com.android.library'
 project.archivesBaseName = 'robust'
 android {
-    compileSdkVersion 24
+    compileSdkVersion 33
     buildToolsVersion '25.0.2'
     defaultConfig {
         minSdkVersion 9
-        targetSdkVersion 24
+        targetSdkVersion 33
         versionCode 1
         versionName '1.0'
     }
@@ -31,7 +31,51 @@ configurations.all {
 }
 dependencies {
 //    compile 'com.meituan.robust:autopatchbase:' + VERSION_NAME
-    compile project(':autopatchbase')
+    implementation project(':autopatchbase')
 }
 
 apply from: '../gradle_mvn_push.gradle'
+
+afterEvaluate {
+    publishing {
+        //发布的 jar 包配置
+        publications {
+            aar(MavenPublication) {
+                groupId = GROUP
+                artifactId = project.getArchivesBaseName()
+                version = VERSION_NAME
+                //aar 文件
+                def projectName = project.getName()
+                artifact "build/outputs/aar/${project.archivesBaseName}-release.aar"
+
+                pom.withXml{
+                    def dependenciesNode = asNode().appendNode("dependencies")
+                    configurations.implementation.allDependencies.forEach(){
+                        Dependency dependency ->
+                            if (dependency.version != "unspecified" && dependency.name != "unspecified"){
+                                def dependencyNode = dependenciesNode.appendNode('dependency')
+                                dependencyNode.appendNode('groupId', dependency.group)
+                                dependencyNode.appendNode('artifactId', dependency.name)
+                                dependencyNode.appendNode('version', dependency.version)
+                            }
+                    }
+                }
+
+            }
+        }
+        //仓库地址配置
+        repositories {
+            maven {
+                repositories {
+                    maven {
+                        url  "/.m2/repository"
+                    }
+                    maven {
+                        url  "/.m2/repository"
+                    }
+                }
+
+            }
+        }
+    }
+}

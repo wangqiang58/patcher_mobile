@@ -1,5 +1,4 @@
-apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
+apply plugin: 'maven-publish'
 group = GROUP
 version = VERSION_NAME
 
@@ -15,7 +14,7 @@ def getPropertyFromLocalProperties(key) {
 
 def getRepositoryUrl() {
     return isSnapshot() ? getPropertyFromLocalProperties("SNAPSHOT_REPOSITORY_URL") : getPropertyFromLocalProperties("RELEASE_REPOSITORY_URL")
-//    return isSnapshot() ? SNAPSHOT_REPOSITORY_URL : RELEASE_REPOSITORY_URL
+    return isSnapshot() ? SNAPSHOT_REPOSITORY_URL : RELEASE_REPOSITORY_URL
 }
 
 def isSnapshot() {
@@ -42,24 +41,7 @@ artifacts {
     archives sourcesJar
 }
 
-uploadArchives {
-    repositories.mavenDeployer {
-        repository(url: repositoryUrl) {
-            authentication(userName: getPropertyFromLocalProperties("USER"), password: getPropertyFromLocalProperties("PASSWORD"))
-        }
-    }
-}
-bintray {
-    user = getPropertyFromLocalProperties("bintray.user")
-    key = getPropertyFromLocalProperties("bintray.apikey")
-    configurations = ['archives']
-    pkg {
-        repo = 'maven'
-        name = "${project.group}:${project.name}"
-        userOrg = 'meituan'
-        licenses = ['Apache-2.0']
-        websiteUrl = 'http://tech.meituan.com/android_autopatch.html'
-        vcsUrl = 'https://github.com/Meituan-Dianping/Robust'
-        publish = true
-    }
-}
+
+
+
+
