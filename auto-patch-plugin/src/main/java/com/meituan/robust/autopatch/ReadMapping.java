@@ -8,6 +8,8 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
+import kotlin.jvm.internal.Intrinsics;
+
 /**
  * Created by mivanzhang on 17/1/19.
  *
@@ -46,6 +48,7 @@ public class ReadMapping {
         String line;
         try {
             is = new FileInputStream(Config.mappingFilePath);
+            Intrinsics.checkNotNull(is);
             BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"), 1024);
             // 读取一行，存储于字符串列表中
             line = reader.readLine().trim();
@@ -68,6 +71,10 @@ public class ReadMapping {
                         line = line.trim();
                         if (line.endsWith(":")) {
                             needBacktrace = true;
+                            break;
+                        }
+
+                        if (line.startsWith("#")){
                             break;
                         }
                         String[] lineinfo = line.split(" ");

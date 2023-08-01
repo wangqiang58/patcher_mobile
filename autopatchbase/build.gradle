@@ -1,4 +1,41 @@
 apply plugin: 'java'
 apply from: '../gradle_mvn_push.gradle'
-sourceCompatibility= 1.7
-targetCompatibility= 1.7
+sourceCompatibility= 1.8
+targetCompatibility= 1.8
+
+//打包源码
+task sourceJar(type: Jar) {
+    from sourceSets.main.allJava
+}
+
+afterEvaluate {
+    publishing {
+        //发布的 jar 包配置
+        publications {
+            maven(MavenPublication) {
+                //指定group/artifact/version信息，可以不填。默认使用项目group/name/version作为groupId/artifactId/version
+                groupId project.group
+                artifactId project.name
+                version "0.4.991"
+                //如果是war包填写components.web，如果是jar包填写components.java
+                from components.java
+
+                //配置上传源码
+                artifact sourceJar {
+                    classifier "sources"
+                }
+
+            }
+        }
+
+        //仓库地址配置
+        repositories {
+            maven {
+                repositories {
+                    mavenLocal()
+                }
+
+            }
+        }
+    }
+}

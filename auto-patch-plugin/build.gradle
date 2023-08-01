@@ -1,7 +1,7 @@
 apply plugin: 'groovy'
 compileGroovy {
-    sourceCompatibility = 1.7
-    targetCompatibility = 1.7
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
 }
 
 dependencies {
@@ -11,6 +11,10 @@ dependencies {
     implementation 'org.javassist:javassist:3.20.0-GA'
 //    compile 'com.meituan.robust:autopatchbase:' + VERSION_NAME
     implementation project(':autopatchbase')
+    implementation 'com.android.tools:common:30.1.2'
+    implementation 'commons-io:commons-io:2.4'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.3.72"
+
 }
 apply from: '../gradle_mvn_push.gradle'
 
@@ -27,7 +31,7 @@ afterEvaluate {
                 //指定group/artifact/version信息，可以不填。默认使用项目group/name/version作为groupId/artifactId/version
                 groupId project.group
                 artifactId project.name
-                version project.version
+                version "0.4.996"
                 //如果是war包填写components.web，如果是jar包填写components.java
                 from components.java
 
@@ -43,12 +47,7 @@ afterEvaluate {
         repositories {
             maven {
                 repositories {
-                    maven {
-                        url  "/.m2/repository"
-                    }
-                    maven {
-                        url  "/.m2/repository"
-                    }
+                    mavenLocal()
                 }
 
             }
