@@ -33,18 +33,19 @@ class RobustApkHashAction implements Action<Project> {
 
                     //protected FileCollection resourceFiles;
                     FileCollection resourceFiles
-                    if (isGradlePlugin320orAbove(project)) {
+                    if (isGradlePlugin420orAbove(project)){
+                        partFiles.add(packageTask.resourceFiles.get().getAsFileTree().getFiles())
+                    }else if (isGradlePlugin320orAbove(project)) {
                         try {
                             //gradle 4.6 适配
                             resourceFiles = packageTask.resourceFiles.get()
                             partFiles.add(resourceFiles.getFiles())
                         } catch (Exception e){
                             //gradle 5.4+ & gradle tools 3.5.0+ 适配
-                            //FIX by wangqiang
-//                            Object resFiles = packageTask.resourceFiles
-//                            for (File file : resFiles){
-//                                partFiles.add(file)
-//                            }
+                            Object resFiles = packageTask.resourceFiles
+                            for (File file : resFiles){
+                                partFiles.add(file)
+                            }
                         }
                     } else {
                         resourceFiles = packageTask.resourceFiles
@@ -294,6 +295,12 @@ class RobustApkHashAction implements Action<Project> {
         //gradlePlugin3.2.0 -> gradle 4.6+
         //see https://developer.android.com/studio/releases/gradle-plugin
         return compare(project.getGradle().gradleVersion, "4.6") >= 0
+    }
+
+    static boolean isGradlePlugin420orAbove(Project project) {
+        //gradlePlugin4.2.0 -> gradle 7.1+
+        //see https://developer.android.com/studio/releases/gradle-plugin
+        return compare(project.getGradle().gradleVersion, "7.1") >= 0
     }
 
     /**
