@@ -9,7 +9,6 @@ dependencies {
     implementation localGroovy()
     implementation 'com.android.tools.build:gradle:7.1.2'
     implementation 'org.javassist:javassist:3.20.0-GA'
-//    compile 'com.meituan.robust:autopatchbase:' + VERSION_NAME
     implementation project(':autopatchbase')
     implementation 'com.android.tools:common:30.1.2'
     implementation 'commons-io:commons-io:2.4'
@@ -31,7 +30,7 @@ afterEvaluate {
                 //指定group/artifact/version信息，可以不填。默认使用项目group/name/version作为groupId/artifactId/version
                 groupId project.group
                 artifactId project.name
-                version "0.4.996"
+                version "0.5.3"
                 //如果是war包填写components.web，如果是jar包填写components.java
                 from components.java
 
@@ -45,6 +44,15 @@ afterEvaluate {
 
         //仓库地址配置
         repositories {
+            maven{
+                url 'https://uneng.staff.xdf.cn/nexus/repository/maven-releases/'
+
+                credentials {
+                    username 'wangqiang38'
+                    password '123456'
+                }
+            }
+
             maven {
                 repositories {
                     mavenLocal()

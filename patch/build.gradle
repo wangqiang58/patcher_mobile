@@ -16,8 +16,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
     packagingOptions {
         exclude 'META-INF/maven/com.google.guava/guava/pom.properties'
@@ -65,6 +65,15 @@ afterEvaluate {
         }
         //仓库地址配置
         repositories {
+            maven{
+                url 'https://uneng.staff.xdf.cn/nexus/repository/maven-releases/'
+
+                credentials {
+                    username 'wangqiang38'
+                    password '123456'
+                }
+            }
+
             maven {
                 repositories {
                     maven {

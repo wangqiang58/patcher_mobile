@@ -2,6 +2,7 @@
 
 buildscript {
     repositories {
+        maven { url 'https://uneng.staff.xdf.cn/nexus/repository/maven-releases/'}
         mavenLocal()
         jcenter()
         google()
@@ -30,6 +31,7 @@ allprojects {
         maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
         maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
         maven { url 'https://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
+        maven { url 'https://uneng.staff.xdf.cn/nexus/repository/maven-releases/'}
         mavenLocal()
         google()
         jcenter()
