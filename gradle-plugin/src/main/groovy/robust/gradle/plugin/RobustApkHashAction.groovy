@@ -263,13 +263,15 @@ class RobustApkHashAction implements Action<Project> {
         ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(filePath + ".temp"));
         ZipEntry entry = zis.getNextEntry();
         while (entry != null) {
-            zos.putNextEntry(new ZipEntry(entry.getName()));
+            def zipEntry = new ZipEntry(entry.getName())
+           //重点是这步
+            zipEntry.setMethod(entry.method)
+            zos.putNextEntry(zipEntry);
             byte[] bytes = IOUtils.toByteArray(zis);
             zos.write(bytes);
             entry = zis.getNextEntry();
         }
         ZipEntry e = new ZipEntry(fileName);
-//        System.out.println("append: " + e.getName());
         zos.putNextEntry(e);
         zos.write(content.getBytes());
         zos.closeEntry();

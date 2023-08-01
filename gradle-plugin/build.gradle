@@ -34,7 +34,7 @@ afterEvaluate {
                 //指定group/artifact/version信息，可以不填。默认使用项目group/name/version作为groupId/artifactId/version
                 groupId project.group
                 artifactId project.name
-                version "0.5.4"
+                version "0.5.5"
                 //如果是war包填写components.web，如果是jar包填写components.java
                 from components.java
 
