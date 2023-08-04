@@ -1,0 +1,62 @@
+apply plugin: 'maven-publish'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+def hasAndroidPlugin() {
+    return getPlugins().inject(false) { a, b ->
+        def classStr = b.getClass().name
+        def isAndroid = ("com.android.build.gradle.LibraryPlugin" == classStr) || ("com.android.build.gradle.AppPlugin" == classStr)
+        a || isAndroid
+    }
+}
+
+if (hasAndroidPlugin()) {
+    task packageSources(type: Jar) {
+        if (android.sourceSets.main.hasProperty('kotlin')) {
+            from android.sourceSets.main.kotlin.srcDirs
+        }
+        from android.sourceSets.main.java.srcDirs
+        from android.sourceSets.main.res.srcDirs
+        archiveClassifier.set("sources")
+    }
+} else {
+    java {
+        withSourcesJar()
+    }
+}
+afterEvaluate {
+    publishing {
+        publications {
+            robust(MavenPublication) {
+                groupId project.GROUP
+                artifactId project.ARTIFACT_ID
+                version project.VERSION_NAME
+                if (hasAndroidPlugin()) {
+                    from components.release
+                    //上次源码任务
+                    artifact(tasks["packageSources"])
+                } else {
+                    from components.java
+                }
+
+            }
+        }
+        repositories {
+            maven {
+                url = MAVEN_RELEASES_REPOSITORY_URL
+                allowInsecureProtocol = true
+                credentials {
+                    username = MAVEN_USERNAME
+                    password = MAVEN_PASSWORD
+                }
+            }
+        }
+    }
+}
+
+
