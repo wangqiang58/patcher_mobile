@@ -12,6 +12,7 @@ import com.xdf.studypatch.model.PatchBean
 import com.xdf.studypatch.util.FileUtils
 import com.xdf.studypatch.util.PackageUtils
 import com.xdf.studypatch.util.PatchHistoryUtil
+import java.io.File
 
 /**
 @author: wangqiang
@@ -102,12 +103,11 @@ object StudyRobust {
 
             override fun onDownloadStart() {
                 Log.d(TAG, "patch onDownloadStart....")
-
-
             }
 
             override fun onDownloadSuccess(patchPath: String) {
                 Log.d(TAG, "patch onDownloadSuccess....")
+                RobustManager.loadPatch(File(PATCH_PATH),response,true)
             }
 
             override fun onDownloadError() {

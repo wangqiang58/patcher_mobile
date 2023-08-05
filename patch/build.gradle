@@ -30,7 +30,7 @@ configurations.all {
     resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
 }
 dependencies {
-    implementation 'com.meituan.robust:autopatchbase:0.5.5'
+    implementation "com.meituan.robust:autopatchbase:${VERSION_NAME}"
 //    implementation project(':autopatchbase')
 }
 
