@@ -1,10 +1,10 @@
-package com.xdf.studypatch.business
+package com.xdf.studypatch.facade
 
 import android.app.Application
 import android.content.Context
 import android.text.TextUtils
 import android.util.Log
-import com.kuaikan.library.kkpatch.callback.IRobustDelegate
+import com.xdf.studypatch.callback.IRobustDelegate
 import com.xdf.studypatch.downloader.IDownloadCallback
 import com.xdf.studypatch.downloader.StudyDownloader
 import com.xdf.studypatch.manager.RobustManager
@@ -101,14 +101,17 @@ object StudyRobust {
         val downloader: StudyDownloader = StudyDownloader(context, object : IDownloadCallback {
 
             override fun onDownloadStart() {
+                Log.d(TAG, "patch onDownloadStart....")
+
 
             }
 
             override fun onDownloadSuccess(patchPath: String) {
+                Log.d(TAG, "patch onDownloadSuccess....")
             }
 
             override fun onDownloadError() {
-
+                Log.d(TAG, "patch onDownloadError....")
             }
 
         })

@@ -1,7 +1,7 @@
 package com.xdf.studypatch.manager
 
 import android.content.Context
-import com.kuaikan.library.kkpatch.callback.IRobustDelegate
+import com.xdf.studypatch.callback.IRobustDelegate
 import com.xdf.studypatch.callback.PatchManipulateImp
 import com.meituan.robust.PatchExecutor
 import com.xdf.studypatch.callback.IRobustCallback

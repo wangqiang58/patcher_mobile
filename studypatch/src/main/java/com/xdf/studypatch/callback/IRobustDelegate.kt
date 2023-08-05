@@ -1,4 +1,4 @@
-package com.kuaikan.library.kkpatch.callback
+package com.xdf.studypatch.callback
 
 import android.content.Context
 

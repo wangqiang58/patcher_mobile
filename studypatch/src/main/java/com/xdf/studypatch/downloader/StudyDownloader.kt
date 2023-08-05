@@ -8,6 +8,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.database.Cursor
 import android.net.Uri
+import android.os.Environment
 
 
 /**
@@ -75,9 +76,9 @@ class StudyDownloader(val context: Context, val callback: IDownloadCallback) {
             .setTitle("更新") // 用于信息查看
             .setDescription("下载patch") // 用于信息查看
             .setDestinationInExternalPublicDir(
-//                Environment.DIRECTORY_DOWNLOADS, "2.zip"
-                destPath, ".patch"
+                Environment.DIRECTORY_DOWNLOADS, "patch.jar"
+
             )
-        val mDownloadId = downloadManager?.enqueue(request) // 加入下载队列
+        val mDownloadId = downloadManager.enqueue(request) // 加入下载队列
     }
 }

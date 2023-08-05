@@ -16,6 +16,7 @@ def hasAndroidPlugin() {
 }
 
 if (hasAndroidPlugin()) {
+    println("是andorid插件")
     task packageSources(type: Jar) {
         if (android.sourceSets.main.hasProperty('kotlin')) {
             from android.sourceSets.main.kotlin.srcDirs
@@ -25,6 +26,7 @@ if (hasAndroidPlugin()) {
         archiveClassifier.set("sources")
     }
 } else {
+    println("是java插件")
     java {
         withSourcesJar()
     }
@@ -32,14 +34,27 @@ if (hasAndroidPlugin()) {
 afterEvaluate {
     publishing {
         publications {
-            robust(MavenPublication) {
+            aar(MavenPublication) {
                 groupId project.GROUP
                 artifactId project.ARTIFACT_ID
                 version project.VERSION_NAME
                 if (hasAndroidPlugin()) {
-                    from components.release
-                    //上次源码任务
-                    artifact(tasks["packageSources"])
+                    //aar 文件
+                    def projectName = project.getName()
+                    artifact "build/outputs/aar/${project.getName()}-release.aar"
+
+                    pom.withXml{
+                        def dependenciesNode = asNode().appendNode("dependencies")
+                        configurations.implementation.allDependencies.forEach(){
+                            Dependency dependency ->
+                                if (dependency.version != "unspecified" && dependency.name != "unspecified"){
+                                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                                    dependencyNode.appendNode('groupId', dependency.group)
+                                    dependencyNode.appendNode('artifactId', dependency.name)
+                                    dependencyNode.appendNode('version', dependency.version)
+                                }
+                        }
+                    }
                 } else {
                     from components.java
                 }

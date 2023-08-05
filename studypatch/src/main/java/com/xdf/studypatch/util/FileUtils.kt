@@ -2,17 +2,11 @@ package com.xdf.studypatch.util
 
 import android.content.Context
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.os.Environment
 import android.text.TextUtils
+import android.util.Log
 import androidx.annotation.NonNull
 import androidx.annotation.Nullable
-import com.kuaikan.library.apt.annotation.MethodDesc
-import com.kuaikan.library.apt.annotation.TypeDesc
-import com.kuaikan.library.base.Global
-import com.kuaikan.library.base.utils.IOUtils.closeQuietly
-import net.lingala.zip4j.core.ZipFile
-import net.lingala.zip4j.model.FileHeader
 import java.io.*
 import java.math.BigDecimal
 import java.math.RoundingMode
@@ -20,7 +14,6 @@ import java.nio.ByteBuffer
 import java.nio.ByteOrder
 import kotlin.experimental.and
 
-@TypeDesc("文件操作工具类")
 object FileUtils {
     private const val TAG = "FileUtil"
 
@@ -44,13 +37,14 @@ object FileUtils {
         SD_APP_MAIN_PATH = File(cacheFile, baseDir)
         SD_ROOT_MAIN_PATH = File(Environment.getExternalStorageDirectory(), baseDir)
 
-        LogUtils.d(TAG, " init: SD_APP_MAIN_PATH = " + SD_APP_MAIN_PATH!!)
-        LogUtils.d(TAG, " init: SD_ROOT_MAIN_PATH = " + SD_ROOT_MAIN_PATH!!)
-        LogUtils.d(TAG, " init: EXTERNAL_CACHE_DIR = " + EXTERNAL_CACHE_DIR!!)
+        Log.d(TAG, " init: SD_APP_MAIN_PATH = " + SD_APP_MAIN_PATH!!)
+
+        Log.d(TAG, " init: SD_ROOT_MAIN_PATH = " + SD_ROOT_MAIN_PATH!!)
+        Log.d(TAG, " init: EXTERNAL_CACHE_DIR = " + EXTERNAL_CACHE_DIR!!)
     }
 
     @JvmStatic
-    @MethodDesc("判断sdcard是否可用")
+    //"判断sdcard是否可用"
     fun isSDCardAvailable(): Boolean {
         try {
             return Environment.getExternalStorageState() == Environment.MEDIA_MOUNTED
@@ -61,19 +55,19 @@ object FileUtils {
     }
     @JvmStatic
     @Nullable
-    @MethodDesc("获取应用的cache存储路径")
+//    @MethodDesc("获取应用的cache存储路径")
     fun getExternalCacheDir(): File? {
         return EXTERNAL_CACHE_DIR
     }
     @JvmStatic
     @Nullable
-    @MethodDesc("获取应用的sdcard存储路径")
+    //"获取应用的sdcard存储路径"
     fun getSDAppPath(): File? {
         return SD_APP_MAIN_PATH
     }
 
     @JvmStatic
-    @MethodDesc("删除文件或文件夹")
+//    @MethodDesc("删除文件或文件夹")
     fun deleteFile(filePath: String?): Boolean {
         if (filePath.isNullOrBlank()) {
             return false
@@ -100,7 +94,7 @@ object FileUtils {
     }
 
     @JvmStatic
-    @MethodDesc("清空文件夹，但不删除文件夹")
+//    @MethodDesc("清空文件夹，但不删除文件夹")
     fun clearDirectory(dirPath: String?): Boolean {
         if (dirPath.isNullOrBlank()) {
             return false
@@ -121,7 +115,7 @@ object FileUtils {
     }
 
     @JvmStatic
-    @MethodDesc("判断文件是否存在")
+    //"判断文件是否存在"
     fun isFileExists(fileName: String?): Boolean {
         return if (!fileName.isNullOrBlank()) {
             isFileExists(File(fileName))
@@ -131,13 +125,13 @@ object FileUtils {
     }
 
     @JvmStatic
-    @MethodDesc("判断文件是否存在")
+    //"判断文件是否存在"
     fun isFileExists(file: File?): Boolean {
         return file?.exists() ?: false
     }
 
     @JvmStatic
-    @MethodDesc("判断文件是否不存在或者为空")
+   //"判断文件是否不存在或者为空"
     fun isFileEmpty(file: File?): Boolean {
         if (file == null || !file.exists()) {
             return true
@@ -146,19 +140,19 @@ object FileUtils {
     }
 
     @JvmStatic
-    @MethodDesc("判断文件是否不存在或者为空")
+    //"判断文件是否不存在或者为空"
     fun isFileEmpty(path: String?): Boolean {
         return path.isNullOrBlank() || isFileEmpty(File(path))
     }
 
     @JvmStatic
-    @MethodDesc("判断文件是否存在或者非空")
+    //"判断文件是否存在或者非空"
     fun isFileExistsAndNotEmpty(fileName: String?): Boolean {
         return !fileName.isNullOrBlank() && isFileExistsAndNotEmpty(File(fileName))
     }
 
     @JvmStatic
-    @MethodDesc("判断文件是否存在或者非空")
+    //"判断文件是否存在或者非空"
     fun isFileExistsAndNotEmpty(file: File?): Boolean {
         return if (file != null) {
             file.exists() && file.length() > 0
@@ -168,25 +162,25 @@ object FileUtils {
     }
 
     @JvmStatic
-    @MethodDesc("判断文件路径是否为目录")
+    //"判断文件路径是否为目录"
     fun isDirectory(fileName: String?): Boolean {
         return !fileName.isNullOrBlank() && isDirectory(File(fileName))
     }
 
     @JvmStatic
-    @MethodDesc("判断文件是否为目录")
+    //"判断文件是否为目录"
     fun isDirectory(file: File?): Boolean {
         return file?.isDirectory ?: false
     }
 
     @JvmStatic
-    @MethodDesc("判断文件是否为文件")
+    //"判断文件是否为文件"
     fun isFile(file: File?): Boolean {
         return file?.isFile ?: false
     }
 
     @JvmStatic
-    @MethodDesc("获取文件扩展名")
+    //"获取文件扩展名"
     fun getFileExt(path: String?): String {
         if (TextUtils.isEmpty(path)) {
             return ""
@@ -205,7 +199,7 @@ object FileUtils {
     }
 
     @JvmStatic
-    @MethodDesc("判断文件路径是否为文件")
+    //"判断文件路径是否为文件"
     fun isFile(fileName: String?): Boolean {
         return !fileName.isNullOrBlank() && isFile(File(fileName))
     }
@@ -214,7 +208,7 @@ object FileUtils {
      * @return true if the file is exists or created
      */
     @JvmStatic
-    @MethodDesc("如果文件夹不存在，则创建文件")
+    //"如果文件夹不存在，则创建文件"
     fun createFolderIfNotExists(file: File?): Boolean {
         if (file == null) {
             return false
@@ -230,7 +224,7 @@ object FileUtils {
      * @return true if the file is exists or created
      */
     @JvmStatic
-    @MethodDesc("如果文件夹不存在，则创建文件")
+   //"如果文件夹不存在，则创建文件"
     fun createFolderIfNotExists(fileName: String?): Boolean {
         return !fileName.isNullOrBlank() && createFolderIfNotExists(File(fileName))
     }
@@ -239,7 +233,7 @@ object FileUtils {
      * @return true if the file is exists or created
      */
     @JvmStatic
-    @MethodDesc("如果文件不存在，则创建文件")
+    //"如果文件不存在，则创建文件"
     fun createFileIfNotExists(file: File?): Boolean {
         if (file == null) {
             return false
@@ -263,7 +257,7 @@ object FileUtils {
      * @return true if the file is exists or created
      */
     @JvmStatic
-    @MethodDesc("如果文件不存在，则创建文件")
+   //"如果文件不存在，则创建文件"
     fun createFileIfNotExists(fileName: String?): Boolean {
         return !fileName.isNullOrBlank() && createFileIfNotExists(File(fileName))
     }
@@ -273,7 +267,7 @@ object FileUtils {
      */
     @JvmStatic
     @NonNull
-    @MethodDesc("获取文件路径中但文件名")
+   //"获取文件路径中但文件名")
     fun getFileName(path: String?): String {
         if (path.isNullOrBlank()) {
             return ""
@@ -283,13 +277,13 @@ object FileUtils {
     }
 
     @JvmStatic
-    @MethodDesc("获取默认sdcard存储路径")
+   //"获取默认sdcard存储路径")
     fun getSDRootMainPath(): String {
         return SD_ROOT_MAIN_PATH!!.absolutePath
     }
 
     @JvmStatic
-    @MethodDesc("复制文件")
+   //"复制文件")
     fun copyFile(src: File?, target: File?): Boolean {
         if (src == null || target == null) {
             return false
@@ -354,13 +348,13 @@ object FileUtils {
     }
 
     @JvmStatic
-    @MethodDesc("复制文件")
+    //"复制文件")
     fun copyFile(srcPath: String?, targetPath: String): Boolean {
         return !srcPath.isNullOrBlank() && !targetPath.isNullOrBlank() && copyFile(File(srcPath), File(targetPath))
     }
 
     @JvmStatic
-    @MethodDesc("从流中复制文件")
+    //"从流中复制文件")
     fun copyStream2File(inStream: InputStream?, target: File?): Boolean {
         if (inStream == null || target == null) {
             return false
@@ -383,21 +377,21 @@ object FileUtils {
      * @return
      */
     @JvmStatic
-    @MethodDesc("获取应用内部存储缓存目录")
-    fun getAppCacheDir(): String {
-        return Global.getContext().cacheDir.absolutePath
+    //("获取应用内部存储缓存目录")
+    fun getAppCacheDir(context: Context): String {
+        return context.cacheDir.absolutePath
     }
 
     @JvmStatic
-    @MethodDesc("获取应用sdcard缓存目录")
-    fun getAppSdcardCacheDir(): String {
-        return Global.getContext().externalCacheDir.absolutePath
+    //("获取应用sdcard缓存目录")
+    fun getAppSdcardCacheDir(context: Context): String? {
+        return context.externalCacheDir?.absolutePath
     }
 
     @JvmStatic
-    @MethodDesc("获取应用内部存储目录")
-    fun getAppFilesDir(folder: String): String {
-        val f = File(Global.getContext().filesDir, folder)
+    //("获取应用内部存储目录")
+    fun getAppFilesDir(context:Context,folder: String): String {
+        val f = File(context.filesDir, folder)
         if (!f.exists()) {
             f.mkdirs()
         }
@@ -405,7 +399,7 @@ object FileUtils {
     }
 
     @JvmStatic
-    @MethodDesc("判断文件是否为gif文件")
+    //("判断文件是否为gif文件")
     fun isGifFile(file: File?): Boolean {
         if (file == null) {
             return false
@@ -432,13 +426,13 @@ object FileUtils {
     }
 
     @JvmStatic
-    @MethodDesc("获取文件大小")
+    //("获取文件大小")
     fun getFileSize(file: File?): Long {
         return if (file == null || !file.exists()) 0 else file.length()
     }
 
     @JvmStatic
-    @MethodDesc("获取文件大小")
+    //("获取文件大小")
     fun getFileSize(path: String?): Long {
         if (path.isNullOrBlank()) {
             return 0
@@ -447,7 +441,7 @@ object FileUtils {
     }
 
     @JvmStatic
-    @MethodDesc("判断文件是否可读")
+//    "判断文件是否可读")
     fun canRead(path: String?): Boolean {
         if (path.isNullOrBlank()) {
             return false
@@ -457,7 +451,7 @@ object FileUtils {
     }
 
     @JvmStatic
-    @MethodDesc("获取文件后缀名")
+    //("获取文件后缀名")
     fun getFileSuffix(path: String?): String {
         if (path.isNullOrBlank()) {
             return ""
@@ -474,7 +468,7 @@ object FileUtils {
     /**
      * @return SDcard总大小，如果SDcard当前没有挂载，则返回-1
      */
-    @MethodDesc("获取SDcard总大小")
+    //("获取SDcard总大小")
     @JvmStatic
     fun getSdCardTotalSpace(): Long {
         val state = Environment.getExternalStorageState()
@@ -486,7 +480,7 @@ object FileUtils {
     /**
      * @return SDcard剩余空间，如果SDcard当前没有挂载，则返回-1
      */
-    @MethodDesc("获取Sdcard剩余空间")
+   //"获取Sdcard剩余空间")
     @JvmStatic
     fun getSdCardFreeSpace(): Long {
         val state = Environment.getExternalStorageState()
@@ -498,52 +492,12 @@ object FileUtils {
     /**
      *
      */
-    @MethodDesc("获取应用私有目录剩余控件")
+    //"获取应用私有目录剩余控件")
     @JvmStatic
-    fun getFreeDataSpace(): Long {
-        return Global.getContext().filesDir.freeSpace
+    fun getFreeDataSpace(context: Context): Long {
+        return context.filesDir.freeSpace
     }
 
-    @MethodDesc("创建符合链接")
-    @JvmStatic
-    fun createSymbolLink(srcPath: String?, targetPath: String?): Boolean {
-        if (srcPath.isNullOrEmpty() || targetPath.isNullOrEmpty() || !isFileExists(srcPath)) {
-            return false
-        }
-        val targetFile = File(targetPath)
-        if (targetFile.exists()) {
-            targetFile.delete()
-        }
-        createFolderIfNotExists(targetFile.parentFile)
-        return FileUtilsNative.createFileLink(srcPath, targetPath)
-    }
-
-    /**
-     * @param path 目标文件路径
-     * @param mode 权限的描述，必须使用8进制，取值与linux chmod命令一致
-     */
-    @MethodDesc("修改文件访问权限")
-    @JvmStatic
-    fun chmod(path: String?, mode: String): Boolean {
-        if (!isFileExists(path) || mode.isNullOrEmpty()) {
-            return false
-        }
-        try {
-            val modeNumber = Integer.parseInt(mode, 8)
-            return FileUtilsNative.chmod(path, modeNumber)
-        } catch (e: java.lang.Exception) {
-            LogUtils.e(TAG, e, e.message)
-        }
-        return false
-    }
-
-    @MethodDesc("获取文件描述符的值")
-    @JvmStatic
-    fun getFileDescriptor(descriptor: FileDescriptor?): Int {
-        descriptor ?: return -1
-        return ReflectUtils.getFieldValue<Int>(FileDescriptor::class.java, descriptor, "descriptor")
-            ?: return -1
-    }
 
 
     /**
@@ -584,70 +538,16 @@ object FileUtils {
         return file.absolutePath
     }
 
-    /**
-     * 解压文件到目标文件夹
-     * @param zipFile File?
-     * @param targetFolder String?
-     * @return Boolean
-     */
-    @JvmStatic
-    fun extractZipFile(zipFile: File?, targetFolder: String?): Boolean {
-        val IGNORE_FOLDER = "__MACOSX"
-        val IGNORE_FILE = ".DS_Store"
-        var isSuccess = false
-        try {
-            val zip: ZipFile = ZipFile(zipFile)
-            val fileHeaders: List<FileHeader>? = zip.getFileHeaders() as? List<FileHeader>
-            if (fileHeaders != null) {
-                for (fileHeader in fileHeaders) {
-                    var filename: String = fileHeader.getFileName()
-                    if (filename.startsWith(IGNORE_FOLDER) || filename.endsWith(IGNORE_FILE)) {
-                        continue
-                    }
-                    if (filename.startsWith(File.separator)) {
-                        filename = filename.substring(1)
-                    }
-                    filename = filename.substring(filename.indexOf(File.separator) + 1)
-                    if (filename != null && !filename.isEmpty()) {
-                        zip.extractFile(fileHeader, targetFolder, null, filename)
-                    }
-                }
-            }
-            isSuccess = true
-        } catch (e: java.lang.Exception) {
-            isSuccess = false
-        }
-        return isSuccess
-    }
+
 
 
     @JvmStatic
-    fun getFilesDir(folder: String?): String? {
-        val f = File(Global.getContext().filesDir, folder)
+    fun getFilesDir(context: Context,folder: String?): String? {
+        val f = File(context.filesDir, folder)
         if (!f.exists()) {
             f.mkdirs()
         }
         return f.absolutePath
-    }
-
-    @JvmStatic
-    fun readStringFromFile(path: String?): String? {
-        var br: BufferedReader? = null
-        try {
-            //可以换成工程目录下的其他文本文件
-            val sb = StringBuffer()
-            br = BufferedReader(FileReader(path))
-            var readline: String?
-            while (br.readLine().also { readline = it } != null) {
-                sb.append(readline)
-            }
-            return sb.toString()
-        } catch (e: java.lang.Exception) {
-            e.printStackTrace()
-        } finally {
-            closeQuietly(br)
-        }
-        return ""
     }
 
     @JvmStatic
@@ -677,80 +577,11 @@ object FileUtils {
         } catch (e: java.lang.Exception) {
             e.printStackTrace()
         } finally {
-            closeQuietly(stream)
+            IOUtils.closeQuietly(stream)
         }
         return false
     }
-    @JvmStatic
-    fun saveBitmapAsFile(path: String, bitmap: Bitmap?): Boolean {
-        if (bitmap == null) {
-            return false
-        }
-        var flag = false
-        val newFile = File(path)
-        val os: FileOutputStream
-        try {
-            os = FileOutputStream(newFile)
-            flag = bitmap.compress(Bitmap.CompressFormat.JPEG, 100, os)
-            os.flush()
-            os.close()
-        } catch (e: java.lang.Exception) {
-            e.printStackTrace()
-        }
-        return flag
-    }
 
-    fun saveBitmapAsFileInPng(path: String?, bitmap: Bitmap): Boolean {
-        var flag = false
-        val file = File(path)
-        val os: FileOutputStream
-        try {
-            os = FileOutputStream(file)
-            flag = bitmap.compress(Bitmap.CompressFormat.PNG, 100, os)
-            os.flush()
-            os.close()
-        } catch (e: java.lang.Exception) {
-            e.printStackTrace()
-        }
-        return flag
-    }
-
-
-    /**
-     * 保存bitmap到SD卡
-     */
-    @JvmStatic
-    fun saveBitmapToSDCard(
-        bitmap: Bitmap?, dirPath: String, imageName: String,
-        format: Bitmap.CompressFormat?
-    ): String? {
-        var format = format
-        Preconditions.checkArgument(bitmap != null, "bitmap must not be null")
-        Preconditions.checkArgument(!TextUtils.isEmpty(dirPath), "dirPath must not be empty")
-        Preconditions.checkArgument(!TextUtils.isEmpty(imageName), "imageName must not be empty")
-        if (format == null) {
-            format = Bitmap.CompressFormat.PNG
-        }
-        val suffix: String
-        suffix = when (format) {
-            Bitmap.CompressFormat.JPEG -> ".jpeg"
-            Bitmap.CompressFormat.WEBP -> ".webp"
-            Bitmap.CompressFormat.PNG -> ".png"
-            else -> ".png"
-        }
-       createFolderIfNotExists(dirPath)
-        val path = dirPath + imageName + suffix
-       deleteFile(path)
-        try {
-            val fos = FileOutputStream(path)
-            bitmap!!.compress(format, 90, fos)
-            fos.close()
-            return path
-        } catch (e: java.lang.Exception) {
-            e.printStackTrace()
-        }
-        return null
-    }
 
     @JvmStatic
     fun saveBitmapAsFile(path: String, viewToShare: Bitmap?, quality: Int): Boolean {
@@ -801,29 +632,5 @@ object FileUtils {
         } else {
             fileLength.toString() + "B"
         }
-    }
-
-    @JvmStatic
-    fun getTypeByName(fileName: String?): String? {
-        if (fileName == null) {
-            return ""
-        }
-        val type = fileName.toLowerCase()
-        val index = type.lastIndexOf(".")
-        return if (index > 0) {
-            type.substring(index + 1)
-        } else {
-            ""
-        }
-    }
-    @JvmStatic
-    fun isImageFile(filePath: String?): Boolean {
-        if (!isFileExists(filePath)) {
-            return false
-        }
-        val options = BitmapFactory.Options()
-        options.inJustDecodeBounds = true
-        BitmapFactory.decodeFile(filePath, options)
-        return options.outWidth > 0
     }
 }
