@@ -6,11 +6,11 @@ plugins {
 
 android {
     namespace 'com.xdf.studypatch'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
-        minSdk 24
-        targetSdk 32
+        minSdk 23
+        targetSdk 33
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -31,14 +31,10 @@ android {
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'com.google.code.gson:gson:2.8.6'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10"
     implementation "com.squareup.okhttp3:okhttp:3.14.9"
     implementation project(":patch")
-
 }
 
 
