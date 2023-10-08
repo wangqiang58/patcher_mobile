@@ -209,7 +209,7 @@ class AutoPatchTransform extends Transform implements Plugin<Project> {
             diretcory.listFiles(new FilenameFilter() {
                 @Override
                 boolean accept(File file, String s) {
-                    return !(Constants.PATACH_JAR_NAME.equals(s))
+                    return !("patch.jar".equals(s))
                 }
             }).each {
                 if(it.isDirectory()){
@@ -287,7 +287,7 @@ class AutoPatchTransform extends Transform implements Plugin<Project> {
         if (!inputFile.exists() || !inputFile.canRead()) {
             throw new RuntimeException("patch.dex is not exists or readable")
         }
-        ZipOutputStream zipOut = new ZipOutputStream(new FileOutputStream(new File(Config.robustGenerateDirectory, Constants.PATACH_JAR_NAME)))
+        ZipOutputStream zipOut = new ZipOutputStream(new FileOutputStream(new File(Config.robustGenerateDirectory, "patch.jar")))
         zipOut.setLevel(Deflater.NO_COMPRESSION)
         FileInputStream fis = new FileInputStream(inputFile)
         zipFile(inputFile,zipOut,Constants.CLASSES_DEX_NAME);

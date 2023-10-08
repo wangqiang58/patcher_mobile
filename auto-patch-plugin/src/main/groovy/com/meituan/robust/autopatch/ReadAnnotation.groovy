@@ -29,6 +29,14 @@ class ReadAnnotation {
         }
         box.forEach {
             ctclass ->
+                if ("META-INF.versions.9.module-info".equals(ctclass.getName())) {
+                    return
+                }
+
+                if (ctclass.getName().startsWith("META-INF")) {
+                    return
+                }
+
                 try {
                     boolean isNewlyAddClass = scanClassForAddClassAnnotation(ctclass);
                     //newly add class donnot need scann for modify
@@ -43,6 +51,7 @@ class ReadAnnotation {
                     logger.warn("something wrong when readAnnotation, " + e.getMessage() + " cannot find class name " + ctclass.name)
                     e.printStackTrace();
                 }
+
         }
         println("new add methods  list is ")
         JavaUtils.printList(Config.newlyAddedMethodSet.toList())

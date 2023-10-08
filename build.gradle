@@ -2,10 +2,31 @@
 
 buildscript {
     repositories {
-        maven { url 'https://uneng.staff.xdf.cn/nexus/repository/maven-releases/'}
-        mavenLocal()
-        jcenter()
+        maven { url 'https://mvnrepository.com/artifact/com.github.gundy/semver4j' }
+
+
+        maven { url 'https://uneng.staff.xdf.cn/nexus/repository/maven-releases/'
+            allowInsecureProtocol = true
+        }
+//        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/public'
+            allowInsecureProtocol = true
+        }
+        maven { url 'https://maven.aliyun.com/repository/central'
+            allowInsecureProtocol = true
+        }
+        maven { url 'https://maven.aliyun.com/repository/google'
+            allowInsecureProtocol = true
+        }
+        maven { url 'https://maven.aliyun.com/repository/public'
+            allowInsecureProtocol = true
+        }
+//        maven { url 'https://maven.aliyun.com/repository/gradle-plugin'
+//            allowInsecureProtocol = true
+//        }
+//        mavenLocal()
         google()
+        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.1.2'
@@ -13,12 +34,15 @@ buildscript {
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
-        classpath 'com.meituan.robust:gradle-plugin:0.4.96'
-        classpath 'com.meituan.robust:auto-patch-plugin:0.4.96'
-        classpath 'me.tatarka:gradle-retrolambda:3.2.0'
+//        classpath 'com.meituan.robust:gradle-plugin:0.4.96'
+//        classpath 'com.meituan.robust:auto-patch-plugin:0.4.96'
+//        classpath 'me.tatarka:gradle-retrolambda:3.2.0'
+        classpath 'com.meituan.robust:gradle-plugin:0.5.21'
+        classpath 'com.meituan.robust:auto-patch-plugin:0.5.38'
+
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
-        classpath 'me.tatarka.retrolambda.projectlombok:lombok.ast:0.2.3.a2'
+//        classpath 'me.tatarka.retrolambda.projectlombok:lombok.ast:0.2.3.a2'
     }
     configurations.classpath.exclude group: 'com.android.tools.external.lombok'
 }
@@ -27,6 +51,7 @@ configurations.all {
 }
 allprojects {
     repositories {
+        maven { url 'https://jitpack.io' }
         maven { url 'https://uneng.staff.xdf.cn/nexus/repository/maven-releases/'}
         maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
         maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }

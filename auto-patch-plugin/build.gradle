@@ -10,6 +10,8 @@ dependencies {
     implementation 'com.android.tools.build:gradle:7.1.2'
     implementation 'org.javassist:javassist:3.24.0-GA'
     implementation project(':autopatchbase')
+//    implementation "com.meituan.robust:autopatchbase:${VERSION_NAME}"
+
     implementation 'com.android.tools:common:30.1.2'
     implementation 'commons-io:commons-io:2.4'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10"

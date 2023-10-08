@@ -74,11 +74,11 @@ public class ReadMapping {
                             break;
                         }
 
-                        if (line.startsWith("#")){
+                        if (line.contains("#")){
                             break;
                         }
                         String[] lineinfo = line.split(" ");
-                        if (lineinfo.length != 4) {
+                        if (lineinfo.length != 4 ) {
                             throw new RuntimeException("mapping line info is error  " + line);
                         }
                         if (lineinfo[1].contains("(") && lineinfo[1].contains(")")) {

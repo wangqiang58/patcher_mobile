@@ -23,7 +23,7 @@
 
         <!--是否在补丁加上log，建议上线的时候这个开关的值为false，测试的时候为true-->
         <!--<patchLog>true</patchLog>-->
-        <patchLog>false</patchLog>
+        <patchLog>true</patchLog>
 
         <!--项目是否支持progaurd-->
         <proguard>true</proguard>
@@ -35,28 +35,24 @@
 
         <!--针对Java8级别的Lambda表达式，编译为private级别的javac函数，此时由开发者决定是否进行插桩处理-->
         <forceInsertLambda>true</forceInsertLambda>
-<!--        <forceInsertLambda>false</forceInsertLambda>-->
+        <!--        <forceInsertLambda>false</forceInsertLambda>-->
     </switch>
 
     <!--需要热补的包名或者类名，这些包名下的所有类都被会插入代码-->
     <!--这个配置项是各个APP需要自行配置，就是你们App里面你们自己代码的包名，
     这些包名下的类会被Robust插入代码，没有被Robust插入代码的类Robust是无法修复的-->
     <packname name="hotfixPackage">
-        <name>com.meituan</name>
-        <name>com.sankuai</name>
-        <name>com.dianping</name>
+        <name>com.freebrio.robustdemo</name>
     </packname>
 
     <!--不需要Robust插入代码的包名，Robust库不需要插入代码，如下的配置项请保留，还可以根据各个APP的情况执行添加-->
     <exceptPackname name="exceptPackage">
-        <name>com.meituan.robust</name>
-        <name>com.meituan.sample.extension</name>
     </exceptPackname>
 
     <!--补丁的包名，请保持和类PatchManipulateImp中fetchPatchList方法中设置的补丁类名保持一致（ setPatchesInfoImplClassFullName("com.meituan.robust.patch.PatchesInfoImpl")），
     各个App可以独立定制，需要确保的是setPatchesInfoImplClassFullName设置的包名是如下的配置项，类名必须是：PatchesInfoImpl-->
     <patchPackname name="patchPackname">
-        <name>com.meituan.robust.patch</name>
+        <name>com.freebrio.robustdemo</name>
     </patchPackname>
 
     <!--自动化补丁中，不需要反射处理的类，这个配置项慎重选择-->
