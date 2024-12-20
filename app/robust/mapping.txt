@@ -1,7 +1,7 @@
 # compiler: R8
 # compiler_version: 3.1.66
 # min_api: 24
-# pg_map_id: 7591ba2
+# pg_map_id: 2319c8a
 # common_typos_disable
 # {"id":"com.android.tools.r8.mapping","version":"1.0"}
 a.ComponentActivity$2$$ExternalSyntheticOutline0 -> a.b:
@@ -9450,112 +9450,117 @@ androidx.constraintlayout.widget.R$id -> s.d:
     4:4:void androidx.recyclerview.R$styleable.<clinit>():0:0 -> <clinit>
     4:4:void s.R$id.$r8$clinit$synthetic():0 -> <clinit>
       # {"id":"com.android.tools.r8.synthesized"}
-    1:1:void androidx.constraintlayout.widget.R$id.$r8$init$synthetic():0:0 -> <init>
+    1:1:void androidx.constraintlayout.widget.R$id.<init>():0:0 -> <init>
     1:1:void s.R$id.$r8$init$synthetic():0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
     void com.google.android.material.animation.Positioning.<init>(int,float,float) -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
+    2:2:void com.google.android.material.behavior.SwipeDismissBehavior.setStartAlphaSwipeDistance(float):0:0 -> <init>
+    2:2:void com.google.android.material.snackbar.BaseTransientBottomBar$BehaviorDelegate.<init>(com.google.android.material.behavior.SwipeDismissBehavior):0 -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+    3:3:void com.google.android.material.behavior.SwipeDismissBehavior.setEndAlphaSwipeDistance(float):0:0 -> <init>
+    3:3:void com.google.android.material.snackbar.BaseTransientBottomBar$BehaviorDelegate.<init>(com.google.android.material.behavior.SwipeDismissBehavior):0 -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+    4:4:void com.google.android.material.behavior.SwipeDismissBehavior.setSwipeDirection(int):0:0 -> <init>
+    4:4:void com.google.android.material.snackbar.BaseTransientBottomBar$BehaviorDelegate.<init>(com.google.android.material.behavior.SwipeDismissBehavior):0 -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
     androidx.lifecycle.ViewModel androidx.lifecycle.ViewModelProvider$NewInstanceFactory.create(java.lang.Class) -> a
-    void androidx.core.util.Preconditions.checkArgument(boolean,java.lang.Object) -> b
-    int androidx.core.util.Preconditions.checkArgumentNonnegative(int) -> c
-    int androidx.core.util.Preconditions.checkArgumentNonnegative(int,java.lang.String) -> d
-    1:1:void androidx.constraintlayout.solver.widgets.ConstraintWidget.setHorizontalDimension(int,int):0:0 -> e
-    1:1:void androidx.constraintlayout.solver.widgets.Optimizer.checkMatchParent(androidx.constraintlayout.solver.widgets.ConstraintWidgetContainer,androidx.constraintlayout.solver.LinearSystem,androidx.constraintlayout.solver.widgets.ConstraintWidget):0 -> e
-    2:2:void androidx.constraintlayout.solver.widgets.Optimizer.checkMatchParent(androidx.constraintlayout.solver.widgets.ConstraintWidgetContainer,androidx.constraintlayout.solver.LinearSystem,androidx.constraintlayout.solver.widgets.ConstraintWidget):0:0 -> e
-    3:3:int androidx.constraintlayout.solver.widgets.ConstraintWidget.getVisibility():0:0 -> e
-    3:3:void androidx.constraintlayout.solver.widgets.Optimizer.checkMatchParent(androidx.constraintlayout.solver.widgets.ConstraintWidgetContainer,androidx.constraintlayout.solver.LinearSystem,androidx.constraintlayout.solver.widgets.ConstraintWidget):0 -> e
-    4:4:void androidx.constraintlayout.solver.widgets.Optimizer.checkMatchParent(androidx.constraintlayout.solver.widgets.ConstraintWidgetContainer,androidx.constraintlayout.solver.LinearSystem,androidx.constraintlayout.solver.widgets.ConstraintWidget):0:0 -> e
-    5:5:void androidx.constraintlayout.solver.widgets.ConstraintWidget.setVerticalDimension(int,int):0:0 -> e
-    5:5:void androidx.constraintlayout.solver.widgets.Optimizer.checkMatchParent(androidx.constraintlayout.solver.widgets.ConstraintWidgetContainer,androidx.constraintlayout.solver.LinearSystem,androidx.constraintlayout.solver.widgets.ConstraintWidget):0 -> e
-    java.lang.Object androidx.core.util.Preconditions.checkNotNull(java.lang.Object,java.lang.Object) -> f
-    void androidx.core.util.Preconditions.checkState(boolean,java.lang.String) -> g
-    int androidx.core.math.MathUtils.clamp(int,int,int) -> h
-    float com.google.android.material.math.MathUtils.dist(float,float,float,float) -> i
-    boolean androidx.constraintlayout.solver.widgets.Optimizer.enabled(int,int) -> j
-    androidx.cardview.widget.RoundRectDrawable androidx.cardview.widget.CardViewApi21Impl.getCardBackground(androidx.cardview.widget.CardViewDelegate) -> k
-    int com.google.android.material.color.MaterialColors.getColor(android.content.Context,int,int) -> l
-    1:1:int com.google.android.material.resources.MaterialAttributes.resolveOrThrow(android.view.View,int):0:0 -> m
-    1:1:int com.google.android.material.color.MaterialColors.getColor(android.view.View,int):0 -> m
-    void com.google.android.material.shape.CornerTreatment.getCornerPath(com.google.android.material.shape.ShapePath,float,float,float) -> n
-    float androidx.cardview.widget.CardViewApi21Impl.getMaxElevation(androidx.cardview.widget.CardViewDelegate) -> o
-    float androidx.cardview.widget.CardViewApi21Impl.getRadius(androidx.cardview.widget.CardViewDelegate) -> p
-    1:1:int com.google.android.material.color.MaterialColors.layer(int,int):0:0 -> q
-    1:1:int com.google.android.material.color.MaterialColors.layer(int,int,float):0 -> q
-    float com.google.android.material.math.MathUtils.lerp(float,float,float) -> r
-    1:1:void androidx.emoji2.text.MetadataListReader$ByteBufferReader.<init>(java.nio.ByteBuffer):0:0 -> s
-    1:1:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> s
-    2:2:void androidx.emoji2.text.MetadataListReader$ByteBufferReader.skip(int):0:0 -> s
-    2:2:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> s
-    2:2:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> s
-    3:3:int androidx.emoji2.text.MetadataListReader$ByteBufferReader.readUnsignedShort():0:0 -> s
-    3:3:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> s
-    3:3:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> s
-    4:4:void androidx.emoji2.text.MetadataListReader$ByteBufferReader.skip(int):0:0 -> s
-    4:4:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> s
-    4:4:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> s
-    5:5:int androidx.emoji2.text.MetadataListReader$ByteBufferReader.readTag():0:0 -> s
-    5:5:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> s
-    5:5:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> s
-    6:6:void androidx.emoji2.text.MetadataListReader$ByteBufferReader.skip(int):0:0 -> s
-    6:6:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> s
-    6:6:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> s
-    7:7:long androidx.emoji2.text.MetadataListReader$ByteBufferReader.readUnsignedInt():0:0 -> s
-    7:7:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> s
-    7:7:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> s
-    8:8:void androidx.emoji2.text.MetadataListReader$ByteBufferReader.skip(int):0:0 -> s
-    8:8:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> s
-    8:8:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> s
-    9:9:long androidx.emoji2.text.MetadataListReader$ByteBufferReader.getPosition():0:0 -> s
-    9:9:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> s
-    9:9:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> s
-    10:10:void androidx.emoji2.text.MetadataListReader$ByteBufferReader.skip(int):0:0 -> s
-    10:10:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> s
-    10:10:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> s
-    11:11:long androidx.emoji2.text.MetadataListReader$ByteBufferReader.readUnsignedInt():0:0 -> s
-    11:11:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> s
-    11:11:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> s
-    12:12:int androidx.emoji2.text.MetadataListReader$ByteBufferReader.readTag():0:0 -> s
-    12:12:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> s
-    12:12:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> s
-    13:13:long androidx.emoji2.text.MetadataListReader$ByteBufferReader.readUnsignedInt():0:0 -> s
-    13:13:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> s
-    13:13:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> s
-    14:14:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0:0 -> s
-    15:15:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.flatbuffer.MetadataList.getRootAsMetadataList(java.nio.ByteBuffer):0:0 -> s
-    15:15:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> s
-    16:16:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.flatbuffer.MetadataList.getRootAsMetadataList(java.nio.ByteBuffer,androidx.emoji2.text.flatbuffer.MetadataList):0:0 -> s
-    16:16:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.flatbuffer.MetadataList.getRootAsMetadataList(java.nio.ByteBuffer):0 -> s
-    16:16:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> s
-    17:17:void androidx.emoji2.text.flatbuffer.MetadataList.__init(int,java.nio.ByteBuffer):0:0 -> s
-    17:17:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.flatbuffer.MetadataList.__assign(int,java.nio.ByteBuffer):0 -> s
-    17:17:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.flatbuffer.MetadataList.getRootAsMetadataList(java.nio.ByteBuffer,androidx.emoji2.text.flatbuffer.MetadataList):0 -> s
-    17:17:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.flatbuffer.MetadataList.getRootAsMetadataList(java.nio.ByteBuffer):0 -> s
-    17:17:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> s
-    18:18:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0:0 -> s
-    18:18:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> s
-    void androidx.cardview.widget.CardViewApi21Impl.setBackgroundColor(androidx.cardview.widget.CardViewDelegate,android.content.res.ColorStateList) -> t
-    1:1:void androidx.cardview.widget.RoundRectDrawable.setPadding(float,boolean,boolean):0:0 -> u
-    1:1:void androidx.cardview.widget.CardViewApi21Impl.setMaxElevation(androidx.cardview.widget.CardViewDelegate,float):0 -> u
-    2:2:void androidx.cardview.widget.CardViewApi21Impl.updatePadding(androidx.cardview.widget.CardViewDelegate):0:0 -> u
-    2:2:void androidx.cardview.widget.CardViewApi21Impl.setMaxElevation(androidx.cardview.widget.CardViewDelegate,float):0 -> u
-    3:3:float androidx.cardview.widget.CardViewApi21Impl.getMaxElevation(androidx.cardview.widget.CardViewDelegate):0:0 -> u
-    3:3:void androidx.cardview.widget.CardViewApi21Impl.updatePadding(androidx.cardview.widget.CardViewDelegate):0 -> u
-    3:3:void androidx.cardview.widget.CardViewApi21Impl.setMaxElevation(androidx.cardview.widget.CardViewDelegate,float):0 -> u
-    4:4:float androidx.cardview.widget.RoundRectDrawable.getPadding():0:0 -> u
-    4:4:float androidx.cardview.widget.CardViewApi21Impl.getMaxElevation(androidx.cardview.widget.CardViewDelegate):0 -> u
-    4:4:void androidx.cardview.widget.CardViewApi21Impl.updatePadding(androidx.cardview.widget.CardViewDelegate):0 -> u
-    4:4:void androidx.cardview.widget.CardViewApi21Impl.setMaxElevation(androidx.cardview.widget.CardViewDelegate,float):0 -> u
-    5:5:float androidx.cardview.widget.CardViewApi21Impl.getRadius(androidx.cardview.widget.CardViewDelegate):0:0 -> u
-    5:5:void androidx.cardview.widget.CardViewApi21Impl.updatePadding(androidx.cardview.widget.CardViewDelegate):0 -> u
-    5:5:void androidx.cardview.widget.CardViewApi21Impl.setMaxElevation(androidx.cardview.widget.CardViewDelegate,float):0 -> u
-    6:6:float androidx.cardview.widget.RoundRectDrawable.getRadius():0:0 -> u
-    6:6:float androidx.cardview.widget.CardViewApi21Impl.getRadius(androidx.cardview.widget.CardViewDelegate):0 -> u
-    6:6:void androidx.cardview.widget.CardViewApi21Impl.updatePadding(androidx.cardview.widget.CardViewDelegate):0 -> u
-    6:6:void androidx.cardview.widget.CardViewApi21Impl.setMaxElevation(androidx.cardview.widget.CardViewDelegate,float):0 -> u
-    7:7:void androidx.cardview.widget.CardViewApi21Impl.updatePadding(androidx.cardview.widget.CardViewDelegate):0:0 -> u
-    7:7:void androidx.cardview.widget.CardViewApi21Impl.setMaxElevation(androidx.cardview.widget.CardViewDelegate,float):0 -> u
-    8:8:void androidx.cardview.widget.RoundRectDrawable.setPadding(float,boolean,boolean):0:0 -> u
-    8:8:void androidx.cardview.widget.CardViewApi21Impl.setMaxElevation(androidx.cardview.widget.CardViewDelegate,float):0 -> u
+    void androidx.core.util.DebugUtils.buildShortClassTag(java.lang.Object,java.lang.StringBuilder) -> b
+    1:1:void androidx.constraintlayout.solver.widgets.ConstraintWidget.setHorizontalDimension(int,int):0:0 -> c
+    1:1:void androidx.constraintlayout.solver.widgets.Optimizer.checkMatchParent(androidx.constraintlayout.solver.widgets.ConstraintWidgetContainer,androidx.constraintlayout.solver.LinearSystem,androidx.constraintlayout.solver.widgets.ConstraintWidget):0 -> c
+    2:2:void androidx.constraintlayout.solver.widgets.Optimizer.checkMatchParent(androidx.constraintlayout.solver.widgets.ConstraintWidgetContainer,androidx.constraintlayout.solver.LinearSystem,androidx.constraintlayout.solver.widgets.ConstraintWidget):0:0 -> c
+    3:3:int androidx.constraintlayout.solver.widgets.ConstraintWidget.getVisibility():0:0 -> c
+    3:3:void androidx.constraintlayout.solver.widgets.Optimizer.checkMatchParent(androidx.constraintlayout.solver.widgets.ConstraintWidgetContainer,androidx.constraintlayout.solver.LinearSystem,androidx.constraintlayout.solver.widgets.ConstraintWidget):0 -> c
+    4:4:void androidx.constraintlayout.solver.widgets.Optimizer.checkMatchParent(androidx.constraintlayout.solver.widgets.ConstraintWidgetContainer,androidx.constraintlayout.solver.LinearSystem,androidx.constraintlayout.solver.widgets.ConstraintWidget):0:0 -> c
+    5:5:void androidx.constraintlayout.solver.widgets.ConstraintWidget.setVerticalDimension(int,int):0:0 -> c
+    5:5:void androidx.constraintlayout.solver.widgets.Optimizer.checkMatchParent(androidx.constraintlayout.solver.widgets.ConstraintWidgetContainer,androidx.constraintlayout.solver.LinearSystem,androidx.constraintlayout.solver.widgets.ConstraintWidget):0 -> c
+    float com.google.android.material.math.MathUtils.dist(float,float,float,float) -> d
+    boolean androidx.constraintlayout.solver.widgets.Optimizer.enabled(int,int) -> e
+    androidx.cardview.widget.RoundRectDrawable androidx.cardview.widget.CardViewApi21Impl.getCardBackground(androidx.cardview.widget.CardViewDelegate) -> f
+    int com.google.android.material.color.MaterialColors.getColor(android.content.Context,int,int) -> g
+    1:1:int com.google.android.material.resources.MaterialAttributes.resolveOrThrow(android.view.View,int):0:0 -> h
+    1:1:int com.google.android.material.color.MaterialColors.getColor(android.view.View,int):0 -> h
+    void com.google.android.material.shape.CornerTreatment.getCornerPath(com.google.android.material.shape.ShapePath,float,float,float) -> i
+    float androidx.cardview.widget.CardViewApi21Impl.getMaxElevation(androidx.cardview.widget.CardViewDelegate) -> j
+    float androidx.cardview.widget.CardViewApi21Impl.getRadius(androidx.cardview.widget.CardViewDelegate) -> k
+    1:1:int com.google.android.material.color.MaterialColors.layer(int,int):0:0 -> l
+    1:1:int com.google.android.material.color.MaterialColors.layer(int,int,float):0 -> l
+    float com.google.android.material.math.MathUtils.lerp(float,float,float) -> m
+    android.view.inputmethod.InputConnection androidx.appcompat.widget.AppCompatHintHelper.onCreateInputConnection(android.view.inputmethod.InputConnection,android.view.inputmethod.EditorInfo,android.view.View) -> n
+    1:1:void androidx.emoji2.text.MetadataListReader$ByteBufferReader.<init>(java.nio.ByteBuffer):0:0 -> o
+    1:1:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> o
+    2:2:void androidx.emoji2.text.MetadataListReader$ByteBufferReader.skip(int):0:0 -> o
+    2:2:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> o
+    2:2:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> o
+    3:3:int androidx.emoji2.text.MetadataListReader$ByteBufferReader.readUnsignedShort():0:0 -> o
+    3:3:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> o
+    3:3:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> o
+    4:4:void androidx.emoji2.text.MetadataListReader$ByteBufferReader.skip(int):0:0 -> o
+    4:4:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> o
+    4:4:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> o
+    5:5:int androidx.emoji2.text.MetadataListReader$ByteBufferReader.readTag():0:0 -> o
+    5:5:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> o
+    5:5:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> o
+    6:6:void androidx.emoji2.text.MetadataListReader$ByteBufferReader.skip(int):0:0 -> o
+    6:6:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> o
+    6:6:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> o
+    7:7:long androidx.emoji2.text.MetadataListReader$ByteBufferReader.readUnsignedInt():0:0 -> o
+    7:7:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> o
+    7:7:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> o
+    8:8:void androidx.emoji2.text.MetadataListReader$ByteBufferReader.skip(int):0:0 -> o
+    8:8:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> o
+    8:8:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> o
+    9:9:long androidx.emoji2.text.MetadataListReader$ByteBufferReader.getPosition():0:0 -> o
+    9:9:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> o
+    9:9:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> o
+    10:10:void androidx.emoji2.text.MetadataListReader$ByteBufferReader.skip(int):0:0 -> o
+    10:10:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> o
+    10:10:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> o
+    11:11:long androidx.emoji2.text.MetadataListReader$ByteBufferReader.readUnsignedInt():0:0 -> o
+    11:11:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> o
+    11:11:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> o
+    12:12:int androidx.emoji2.text.MetadataListReader$ByteBufferReader.readTag():0:0 -> o
+    12:12:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> o
+    12:12:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> o
+    13:13:long androidx.emoji2.text.MetadataListReader$ByteBufferReader.readUnsignedInt():0:0 -> o
+    13:13:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0 -> o
+    13:13:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> o
+    14:14:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0:0 -> o
+    15:15:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.flatbuffer.MetadataList.getRootAsMetadataList(java.nio.ByteBuffer):0:0 -> o
+    15:15:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> o
+    16:16:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.flatbuffer.MetadataList.getRootAsMetadataList(java.nio.ByteBuffer,androidx.emoji2.text.flatbuffer.MetadataList):0:0 -> o
+    16:16:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.flatbuffer.MetadataList.getRootAsMetadataList(java.nio.ByteBuffer):0 -> o
+    16:16:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> o
+    17:17:void androidx.emoji2.text.flatbuffer.MetadataList.__init(int,java.nio.ByteBuffer):0:0 -> o
+    17:17:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.flatbuffer.MetadataList.__assign(int,java.nio.ByteBuffer):0 -> o
+    17:17:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.flatbuffer.MetadataList.getRootAsMetadataList(java.nio.ByteBuffer,androidx.emoji2.text.flatbuffer.MetadataList):0 -> o
+    17:17:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.flatbuffer.MetadataList.getRootAsMetadataList(java.nio.ByteBuffer):0 -> o
+    17:17:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> o
+    18:18:androidx.emoji2.text.MetadataListReader$OffsetInfo androidx.emoji2.text.MetadataListReader.findOffsetInfo(androidx.emoji2.text.MetadataListReader$OpenTypeReader):0:0 -> o
+    18:18:androidx.emoji2.text.flatbuffer.MetadataList androidx.emoji2.text.MetadataListReader.read(java.nio.ByteBuffer):0 -> o
+    void androidx.cardview.widget.CardViewApi21Impl.setBackgroundColor(androidx.cardview.widget.CardViewDelegate,android.content.res.ColorStateList) -> p
+    1:1:void androidx.cardview.widget.RoundRectDrawable.setPadding(float,boolean,boolean):0:0 -> q
+    1:1:void androidx.cardview.widget.CardViewApi21Impl.setMaxElevation(androidx.cardview.widget.CardViewDelegate,float):0 -> q
+    2:2:void androidx.cardview.widget.CardViewApi21Impl.updatePadding(androidx.cardview.widget.CardViewDelegate):0:0 -> q
+    2:2:void androidx.cardview.widget.CardViewApi21Impl.setMaxElevation(androidx.cardview.widget.CardViewDelegate,float):0 -> q
+    3:3:float androidx.cardview.widget.CardViewApi21Impl.getMaxElevation(androidx.cardview.widget.CardViewDelegate):0:0 -> q
+    3:3:void androidx.cardview.widget.CardViewApi21Impl.updatePadding(androidx.cardview.widget.CardViewDelegate):0 -> q
+    3:3:void androidx.cardview.widget.CardViewApi21Impl.setMaxElevation(androidx.cardview.widget.CardViewDelegate,float):0 -> q
+    4:4:float androidx.cardview.widget.RoundRectDrawable.getPadding():0:0 -> q
+    4:4:float androidx.cardview.widget.CardViewApi21Impl.getMaxElevation(androidx.cardview.widget.CardViewDelegate):0 -> q
+    4:4:void androidx.cardview.widget.CardViewApi21Impl.updatePadding(androidx.cardview.widget.CardViewDelegate):0 -> q
+    4:4:void androidx.cardview.widget.CardViewApi21Impl.setMaxElevation(androidx.cardview.widget.CardViewDelegate,float):0 -> q
+    5:5:float androidx.cardview.widget.CardViewApi21Impl.getRadius(androidx.cardview.widget.CardViewDelegate):0:0 -> q
+    5:5:void androidx.cardview.widget.CardViewApi21Impl.updatePadding(androidx.cardview.widget.CardViewDelegate):0 -> q
+    5:5:void androidx.cardview.widget.CardViewApi21Impl.setMaxElevation(androidx.cardview.widget.CardViewDelegate,float):0 -> q
+    6:6:float androidx.cardview.widget.RoundRectDrawable.getRadius():0:0 -> q
+    6:6:float androidx.cardview.widget.CardViewApi21Impl.getRadius(androidx.cardview.widget.CardViewDelegate):0 -> q
+    6:6:void androidx.cardview.widget.CardViewApi21Impl.updatePadding(androidx.cardview.widget.CardViewDelegate):0 -> q
+    6:6:void androidx.cardview.widget.CardViewApi21Impl.setMaxElevation(androidx.cardview.widget.CardViewDelegate,float):0 -> q
+    7:7:void androidx.cardview.widget.CardViewApi21Impl.updatePadding(androidx.cardview.widget.CardViewDelegate):0:0 -> q
+    7:7:void androidx.cardview.widget.CardViewApi21Impl.setMaxElevation(androidx.cardview.widget.CardViewDelegate,float):0 -> q
+    8:8:void androidx.cardview.widget.RoundRectDrawable.setPadding(float,boolean,boolean):0:0 -> q
+    8:8:void androidx.cardview.widget.CardViewApi21Impl.setMaxElevation(androidx.cardview.widget.CardViewDelegate,float):0 -> q
 androidx.constraintlayout.widget.VirtualLayout -> s.e:
     boolean mApplyVisibilityOnAttach -> i
     boolean mApplyElevationOnAttach -> j
@@ -10772,7 +10777,7 @@ androidx.core.graphics.TypefaceCompat -> z.g:
     android.graphics.Typeface createFromResourcesFontFile(android.content.Context,android.content.res.Resources,int,java.lang.String,int) -> b
     java.lang.String createResourceUid(android.content.res.Resources,int,int) -> c
 androidx.core.graphics.TypefaceCompat$ResourcesCallbackAdapter -> z.g$a:
-    androidx.core.content.res.ResourcesCompat$FontCallback mFontCallback -> P
+    androidx.core.content.res.ResourcesCompat$FontCallback mFontCallback -> X
 androidx.core.graphics.TypefaceCompatApi21Impl -> z.h:
     java.lang.reflect.Method sAddFontWeightStyle -> d
     boolean sHasInitBeenCalled -> f
@@ -21373,28 +21378,28 @@ androidx.transition.ViewUtils$2 -> a1.r$b:
     2:2:void set(java.lang.Object,java.lang.Object):0 -> set
 androidx.transition.ViewUtilsApi19 -> a1.s:
     boolean sTryHiddenTransitionAlpha -> X
-    void clearNonTransitionAlpha(android.view.View) -> i
-    float getTransitionAlpha(android.view.View) -> n
-    void saveNonTransitionAlpha(android.view.View) -> v
-    void setTransitionAlpha(android.view.View,float) -> z
+    void setTransitionAlpha(android.view.View,float) -> D
+    void clearNonTransitionAlpha(android.view.View) -> n
+    float getTransitionAlpha(android.view.View) -> s
+    void saveNonTransitionAlpha(android.view.View) -> z
 androidx.transition.ViewUtilsApi21 -> a1.t:
     boolean sTryHiddenTransformMatrixToGlobal -> Y
     boolean sTryHiddenTransformMatrixToLocal -> Z
-    void transformMatrixToGlobal(android.view.View,android.graphics.Matrix) -> B
-    void transformMatrixToLocal(android.view.View,android.graphics.Matrix) -> C
+    void transformMatrixToGlobal(android.view.View,android.graphics.Matrix) -> F
+    void transformMatrixToLocal(android.view.View,android.graphics.Matrix) -> G
 androidx.transition.ViewUtilsApi22 -> a1.u:
     boolean sTryHiddenSetLeftTopRightBottom -> a0
-    void setLeftTopRightBottom(android.view.View,int,int,int,int) -> x
+    void setLeftTopRightBottom(android.view.View,int,int,int,int) -> B
 androidx.transition.ViewUtilsApi23 -> a1.v:
     boolean sTryHiddenSetTransitionVisibility -> b0
-    void setTransitionVisibility(android.view.View,int) -> A
+    void setTransitionVisibility(android.view.View,int) -> E
 androidx.transition.ViewUtilsApi29 -> a1.w:
-    void setTransitionVisibility(android.view.View,int) -> A
-    void transformMatrixToGlobal(android.view.View,android.graphics.Matrix) -> B
-    void transformMatrixToLocal(android.view.View,android.graphics.Matrix) -> C
-    float getTransitionAlpha(android.view.View) -> n
-    void setLeftTopRightBottom(android.view.View,int,int,int,int) -> x
-    void setTransitionAlpha(android.view.View,float) -> z
+    void setLeftTopRightBottom(android.view.View,int,int,int,int) -> B
+    void setTransitionAlpha(android.view.View,float) -> D
+    void setTransitionVisibility(android.view.View,int) -> E
+    void transformMatrixToGlobal(android.view.View,android.graphics.Matrix) -> F
+    void transformMatrixToLocal(android.view.View,android.graphics.Matrix) -> G
+    float getTransitionAlpha(android.view.View) -> s
 androidx.transition.Visibility -> a1.y:
     int mMode -> y
     java.lang.String[] sTransitionProperties -> z
@@ -21611,9 +21616,7 @@ androidx.viewpager2.widget.ViewPager2$LinearLayoutManagerImpl -> androidx.viewpa
     boolean performAccessibilityAction(androidx.recyclerview.widget.RecyclerView$Recycler,androidx.recyclerview.widget.RecyclerView$State,int,android.os.Bundle) -> p0
     boolean requestChildRectangleOnScreen(androidx.recyclerview.widget.RecyclerView,android.view.View,android.graphics.Rect,boolean,boolean) -> v0
 com.freebrio.robustdemo.MainActivity -> com.freebrio.robustdemo.MainActivity:
-    void $r8$lambda$jTi6TdM7f-oKbRRcps43u_mgo6M(com.freebrio.robustdemo.MainActivity,android.view.View) -> a
-      # {"id":"com.android.tools.r8.synthesized"}
-    void $r8$lambda$yu0I9alFn9dfeljYMPz8gzHsKUg(com.freebrio.robustdemo.MainActivity,android.view.View) -> b
+    void $r8$lambda$yu0I9alFn9dfeljYMPz8gzHsKUg(com.freebrio.robustdemo.MainActivity,android.view.View) -> a
       # {"id":"com.android.tools.r8.synthesized"}
 com.google.android.material.animation.AnimationUtils -> f1.a:
     android.animation.TimeInterpolator LINEAR_INTERPOLATOR -> a
@@ -26319,7 +26322,7 @@ com.google.android.material.shape.AdjustedCornerSize -> c2.b:
 com.google.android.material.shape.CornerSize -> c2.c:
     float getCornerSize(android.graphics.RectF) -> a
 com.google.android.material.shape.CutCornerTreatment -> c2.d:
-    void getCornerPath(com.google.android.material.shape.ShapePath,float,float,float) -> n
+    void getCornerPath(com.google.android.material.shape.ShapePath,float,float,float) -> i
 com.google.android.material.shape.EdgeTreatment -> c2.e:
     int[] com.google.android.material.R$styleable.MaterialTextView -> w
     float[][] androidx.core.content.res.CamUtils.CAM16RGB_TO_XYZ -> U
@@ -26393,19 +26396,28 @@ com.google.android.material.shape.EdgeTreatment -> c2.e:
     1:1:void com.google.android.material.shape.EdgeTreatment.<init>():0:0 -> <init>
     1:1:void c2.EdgeTreatment.$r8$init$synthetic():0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-    2:2:void com.google.android.material.behavior.SwipeDismissBehavior.setStartAlphaSwipeDistance(float):0:0 -> <init>
-    2:2:void com.google.android.material.snackbar.BaseTransientBottomBar$BehaviorDelegate.<init>(com.google.android.material.behavior.SwipeDismissBehavior):0 -> <init>
-      # {"id":"com.android.tools.r8.synthesized"}
-    3:3:void com.google.android.material.behavior.SwipeDismissBehavior.setEndAlphaSwipeDistance(float):0:0 -> <init>
-    3:3:void com.google.android.material.snackbar.BaseTransientBottomBar$BehaviorDelegate.<init>(com.google.android.material.behavior.SwipeDismissBehavior):0 -> <init>
-      # {"id":"com.android.tools.r8.synthesized"}
-    4:4:void com.google.android.material.behavior.SwipeDismissBehavior.setSwipeDirection(int):0:0 -> <init>
-    4:4:void com.google.android.material.snackbar.BaseTransientBottomBar$BehaviorDelegate.<init>(com.google.android.material.behavior.SwipeDismissBehavior):0 -> <init>
-      # {"id":"com.android.tools.r8.synthesized"}
-    void androidx.transition.ViewUtilsBase.setTransitionVisibility(android.view.View,int) -> A
-    void androidx.transition.ViewUtilsBase.transformMatrixToGlobal(android.view.View,android.graphics.Matrix) -> B
-    void androidx.transition.ViewUtilsBase.transformMatrixToLocal(android.view.View,android.graphics.Matrix) -> C
-    float androidx.core.content.res.CamUtils.yFromLStar(float) -> D
+    1:1:void com.google.android.material.shape.MaterialShapeDrawable.setElevation(float):0:0 -> A
+    1:1:void com.google.android.material.shape.MaterialShapeUtils.setElevation(android.view.View,float):0 -> A
+    void androidx.transition.ViewUtilsBase.setLeftTopRightBottom(android.view.View,int,int,int,int) -> B
+    1:1:boolean com.google.android.material.shape.MaterialShapeDrawable.isElevationOverlayEnabled():0:0 -> C
+    1:1:void com.google.android.material.shape.MaterialShapeUtils.setParentAbsoluteElevation(android.view.View,com.google.android.material.shape.MaterialShapeDrawable):0 -> C
+    2:2:boolean com.google.android.material.elevation.ElevationOverlayProvider.isThemeElevationOverlayEnabled():0:0 -> C
+    2:2:boolean com.google.android.material.shape.MaterialShapeDrawable.isElevationOverlayEnabled():0 -> C
+    2:2:void com.google.android.material.shape.MaterialShapeUtils.setParentAbsoluteElevation(android.view.View,com.google.android.material.shape.MaterialShapeDrawable):0 -> C
+    3:3:float com.google.android.material.internal.ViewUtils.getParentAbsoluteElevation(android.view.View):0:0 -> C
+    3:3:void com.google.android.material.shape.MaterialShapeUtils.setParentAbsoluteElevation(android.view.View,com.google.android.material.shape.MaterialShapeDrawable):0 -> C
+    4:4:float androidx.core.view.ViewCompat.getElevation(android.view.View):0:0 -> C
+    4:4:float com.google.android.material.internal.ViewUtils.getParentAbsoluteElevation(android.view.View):0 -> C
+    4:4:void com.google.android.material.shape.MaterialShapeUtils.setParentAbsoluteElevation(android.view.View,com.google.android.material.shape.MaterialShapeDrawable):0 -> C
+    5:5:float com.google.android.material.internal.ViewUtils.getParentAbsoluteElevation(android.view.View):0:0 -> C
+    5:5:void com.google.android.material.shape.MaterialShapeUtils.setParentAbsoluteElevation(android.view.View,com.google.android.material.shape.MaterialShapeDrawable):0 -> C
+    6:6:void com.google.android.material.shape.MaterialShapeDrawable.setParentAbsoluteElevation(float):0:0 -> C
+    6:6:void com.google.android.material.shape.MaterialShapeUtils.setParentAbsoluteElevation(android.view.View,com.google.android.material.shape.MaterialShapeDrawable):0 -> C
+    void androidx.transition.ViewUtilsBase.setTransitionAlpha(android.view.View,float) -> D
+    void androidx.transition.ViewUtilsBase.setTransitionVisibility(android.view.View,int) -> E
+    void androidx.transition.ViewUtilsBase.transformMatrixToGlobal(android.view.View,android.graphics.Matrix) -> F
+    void androidx.transition.ViewUtilsBase.transformMatrixToLocal(android.view.View,android.graphics.Matrix) -> G
+    float androidx.core.content.res.CamUtils.yFromLStar(float) -> H
     void androidx.core.view.ViewPropertyAnimatorListenerAdapter.onAnimationStart(android.view.View) -> b
     void androidx.core.view.ViewPropertyAnimatorListenerAdapter.onAnimationCancel(android.view.View) -> c
     1:1:void androidx.constraintlayout.solver.widgets.ChainHead.define():0:0 -> d
@@ -26476,61 +26488,47 @@ com.google.android.material.shape.EdgeTreatment -> c2.e:
     24:24:void androidx.constraintlayout.solver.widgets.Chain.applyChainConstraints(androidx.constraintlayout.solver.widgets.ConstraintWidgetContainer,androidx.constraintlayout.solver.LinearSystem,java.util.ArrayList,int):0 -> d
     int androidx.collection.ContainerHelpers.binarySearch(int[],int,int) -> e
     int androidx.collection.ContainerHelpers.binarySearch(long[],int,long) -> f
-    void androidx.core.util.DebugUtils.buildShortClassTag(java.lang.Object,java.lang.StringBuilder) -> g
-    1:1:int androidx.core.content.PermissionChecker.checkPermission(android.content.Context,java.lang.String,int,int,java.lang.String):0:0 -> h
-    1:1:int androidx.core.content.PermissionChecker.checkSelfPermission(android.content.Context,java.lang.String):0 -> h
-    2:2:java.lang.String androidx.core.app.AppOpsManagerCompat.permissionToOp(java.lang.String):0:0 -> h
-    2:2:int androidx.core.content.PermissionChecker.checkPermission(android.content.Context,java.lang.String,int,int,java.lang.String):0 -> h
-    2:2:int androidx.core.content.PermissionChecker.checkSelfPermission(android.content.Context,java.lang.String):0 -> h
-    3:3:int androidx.core.content.PermissionChecker.checkPermission(android.content.Context,java.lang.String,int,int,java.lang.String):0:0 -> h
-    3:3:int androidx.core.content.PermissionChecker.checkSelfPermission(android.content.Context,java.lang.String):0 -> h
-    4:4:boolean androidx.core.util.ObjectsCompat.equals(java.lang.Object,java.lang.Object):0:0 -> h
-    4:4:int androidx.core.content.PermissionChecker.checkPermission(android.content.Context,java.lang.String,int,int,java.lang.String):0 -> h
-    4:4:int androidx.core.content.PermissionChecker.checkSelfPermission(android.content.Context,java.lang.String):0 -> h
-    5:5:int androidx.core.app.AppOpsManagerCompat.checkOrNoteProxyOp(android.content.Context,int,java.lang.String,java.lang.String):0:0 -> h
-    5:5:int androidx.core.content.PermissionChecker.checkPermission(android.content.Context,java.lang.String,int,int,java.lang.String):0 -> h
-    5:5:int androidx.core.content.PermissionChecker.checkSelfPermission(android.content.Context,java.lang.String):0 -> h
-    6:6:int androidx.core.app.AppOpsManagerCompat.noteProxyOpNoThrow(android.content.Context,java.lang.String,java.lang.String):0:0 -> h
-    6:6:int androidx.core.app.AppOpsManagerCompat.checkOrNoteProxyOp(android.content.Context,int,java.lang.String,java.lang.String):0 -> h
-    6:6:int androidx.core.content.PermissionChecker.checkPermission(android.content.Context,java.lang.String,int,int,java.lang.String):0 -> h
-    6:6:int androidx.core.content.PermissionChecker.checkSelfPermission(android.content.Context,java.lang.String):0 -> h
-    7:7:int androidx.core.app.AppOpsManagerCompat.noteProxyOpNoThrow(android.content.Context,java.lang.String,java.lang.String):0:0 -> h
-    7:7:int androidx.core.content.PermissionChecker.checkPermission(android.content.Context,java.lang.String,int,int,java.lang.String):0 -> h
-    7:7:int androidx.core.content.PermissionChecker.checkSelfPermission(android.content.Context,java.lang.String):0 -> h
-    void androidx.transition.ViewUtilsBase.clearNonTransitionAlpha(android.view.View) -> i
-    1:1:com.google.android.material.shape.CornerTreatment com.google.android.material.shape.MaterialShapeUtils.createDefaultCornerTreatment():0:0 -> j
-    1:1:com.google.android.material.shape.CornerTreatment com.google.android.material.shape.MaterialShapeUtils.createCornerTreatment(int):0 -> j
-    2:2:com.google.android.material.shape.CornerTreatment com.google.android.material.shape.MaterialShapeUtils.createCornerTreatment(int):0:0 -> j
-    boolean androidx.collection.ContainerHelpers.equal(java.lang.Object,java.lang.Object) -> k
-    void getEdgePath(float,float,float,com.google.android.material.shape.ShapePath) -> l
-    android.widget.TextView com.google.android.material.internal.ToolbarUtils.getTextView(androidx.appcompat.widget.Toolbar,java.lang.CharSequence) -> m
-    float androidx.transition.ViewUtilsBase.getTransitionAlpha(android.view.View) -> n
-    int androidx.collection.ContainerHelpers.idealByteArraySize(int) -> o
-    int androidx.collection.ContainerHelpers.idealIntArraySize(int) -> p
-    int androidx.collection.ContainerHelpers.idealLongArraySize(int) -> q
-    int androidx.core.content.res.CamUtils.intFromLStar(float) -> r
-    float androidx.core.content.res.CamUtils.linearized(int) -> s
-    android.view.inputmethod.InputConnection androidx.appcompat.widget.AppCompatHintHelper.onCreateInputConnection(android.view.inputmethod.InputConnection,android.view.inputmethod.EditorInfo,android.view.View) -> t
-    void com.google.android.material.animation.AnimatorSetCompat.playTogether(android.animation.AnimatorSet,java.util.List) -> u
-    void androidx.transition.ViewUtilsBase.saveNonTransitionAlpha(android.view.View) -> v
-    1:1:void com.google.android.material.shape.MaterialShapeDrawable.setElevation(float):0:0 -> w
-    1:1:void com.google.android.material.shape.MaterialShapeUtils.setElevation(android.view.View,float):0 -> w
-    void androidx.transition.ViewUtilsBase.setLeftTopRightBottom(android.view.View,int,int,int,int) -> x
-    1:1:boolean com.google.android.material.shape.MaterialShapeDrawable.isElevationOverlayEnabled():0:0 -> y
-    1:1:void com.google.android.material.shape.MaterialShapeUtils.setParentAbsoluteElevation(android.view.View,com.google.android.material.shape.MaterialShapeDrawable):0 -> y
-    2:2:boolean com.google.android.material.elevation.ElevationOverlayProvider.isThemeElevationOverlayEnabled():0:0 -> y
-    2:2:boolean com.google.android.material.shape.MaterialShapeDrawable.isElevationOverlayEnabled():0 -> y
-    2:2:void com.google.android.material.shape.MaterialShapeUtils.setParentAbsoluteElevation(android.view.View,com.google.android.material.shape.MaterialShapeDrawable):0 -> y
-    3:3:float com.google.android.material.internal.ViewUtils.getParentAbsoluteElevation(android.view.View):0:0 -> y
-    3:3:void com.google.android.material.shape.MaterialShapeUtils.setParentAbsoluteElevation(android.view.View,com.google.android.material.shape.MaterialShapeDrawable):0 -> y
-    4:4:float androidx.core.view.ViewCompat.getElevation(android.view.View):0:0 -> y
-    4:4:float com.google.android.material.internal.ViewUtils.getParentAbsoluteElevation(android.view.View):0 -> y
-    4:4:void com.google.android.material.shape.MaterialShapeUtils.setParentAbsoluteElevation(android.view.View,com.google.android.material.shape.MaterialShapeDrawable):0 -> y
-    5:5:float com.google.android.material.internal.ViewUtils.getParentAbsoluteElevation(android.view.View):0:0 -> y
-    5:5:void com.google.android.material.shape.MaterialShapeUtils.setParentAbsoluteElevation(android.view.View,com.google.android.material.shape.MaterialShapeDrawable):0 -> y
-    6:6:void com.google.android.material.shape.MaterialShapeDrawable.setParentAbsoluteElevation(float):0:0 -> y
-    6:6:void com.google.android.material.shape.MaterialShapeUtils.setParentAbsoluteElevation(android.view.View,com.google.android.material.shape.MaterialShapeDrawable):0 -> y
-    void androidx.transition.ViewUtilsBase.setTransitionAlpha(android.view.View,float) -> z
+    void androidx.core.util.Preconditions.checkArgument(boolean,java.lang.Object) -> g
+    int androidx.core.util.Preconditions.checkArgumentNonnegative(int) -> h
+    int androidx.core.util.Preconditions.checkArgumentNonnegative(int,java.lang.String) -> i
+    java.lang.Object androidx.core.util.Preconditions.checkNotNull(java.lang.Object,java.lang.Object) -> j
+    1:1:int androidx.core.content.PermissionChecker.checkPermission(android.content.Context,java.lang.String,int,int,java.lang.String):0:0 -> k
+    1:1:int androidx.core.content.PermissionChecker.checkSelfPermission(android.content.Context,java.lang.String):0 -> k
+    2:2:java.lang.String androidx.core.app.AppOpsManagerCompat.permissionToOp(java.lang.String):0:0 -> k
+    2:2:int androidx.core.content.PermissionChecker.checkPermission(android.content.Context,java.lang.String,int,int,java.lang.String):0 -> k
+    2:2:int androidx.core.content.PermissionChecker.checkSelfPermission(android.content.Context,java.lang.String):0 -> k
+    3:3:int androidx.core.content.PermissionChecker.checkPermission(android.content.Context,java.lang.String,int,int,java.lang.String):0:0 -> k
+    3:3:int androidx.core.content.PermissionChecker.checkSelfPermission(android.content.Context,java.lang.String):0 -> k
+    4:4:boolean androidx.core.util.ObjectsCompat.equals(java.lang.Object,java.lang.Object):0:0 -> k
+    4:4:int androidx.core.content.PermissionChecker.checkPermission(android.content.Context,java.lang.String,int,int,java.lang.String):0 -> k
+    4:4:int androidx.core.content.PermissionChecker.checkSelfPermission(android.content.Context,java.lang.String):0 -> k
+    5:5:int androidx.core.app.AppOpsManagerCompat.checkOrNoteProxyOp(android.content.Context,int,java.lang.String,java.lang.String):0:0 -> k
+    5:5:int androidx.core.content.PermissionChecker.checkPermission(android.content.Context,java.lang.String,int,int,java.lang.String):0 -> k
+    5:5:int androidx.core.content.PermissionChecker.checkSelfPermission(android.content.Context,java.lang.String):0 -> k
+    6:6:int androidx.core.app.AppOpsManagerCompat.noteProxyOpNoThrow(android.content.Context,java.lang.String,java.lang.String):0:0 -> k
+    6:6:int androidx.core.app.AppOpsManagerCompat.checkOrNoteProxyOp(android.content.Context,int,java.lang.String,java.lang.String):0 -> k
+    6:6:int androidx.core.content.PermissionChecker.checkPermission(android.content.Context,java.lang.String,int,int,java.lang.String):0 -> k
+    6:6:int androidx.core.content.PermissionChecker.checkSelfPermission(android.content.Context,java.lang.String):0 -> k
+    7:7:int androidx.core.app.AppOpsManagerCompat.noteProxyOpNoThrow(android.content.Context,java.lang.String,java.lang.String):0:0 -> k
+    7:7:int androidx.core.content.PermissionChecker.checkPermission(android.content.Context,java.lang.String,int,int,java.lang.String):0 -> k
+    7:7:int androidx.core.content.PermissionChecker.checkSelfPermission(android.content.Context,java.lang.String):0 -> k
+    void androidx.core.util.Preconditions.checkState(boolean,java.lang.String) -> l
+    int androidx.core.math.MathUtils.clamp(int,int,int) -> m
+    void androidx.transition.ViewUtilsBase.clearNonTransitionAlpha(android.view.View) -> n
+    1:1:com.google.android.material.shape.CornerTreatment com.google.android.material.shape.MaterialShapeUtils.createDefaultCornerTreatment():0:0 -> o
+    1:1:com.google.android.material.shape.CornerTreatment com.google.android.material.shape.MaterialShapeUtils.createCornerTreatment(int):0 -> o
+    2:2:com.google.android.material.shape.CornerTreatment com.google.android.material.shape.MaterialShapeUtils.createCornerTreatment(int):0:0 -> o
+    boolean androidx.collection.ContainerHelpers.equal(java.lang.Object,java.lang.Object) -> p
+    void getEdgePath(float,float,float,com.google.android.material.shape.ShapePath) -> q
+    android.widget.TextView com.google.android.material.internal.ToolbarUtils.getTextView(androidx.appcompat.widget.Toolbar,java.lang.CharSequence) -> r
+    float androidx.transition.ViewUtilsBase.getTransitionAlpha(android.view.View) -> s
+    int androidx.collection.ContainerHelpers.idealByteArraySize(int) -> t
+    int androidx.collection.ContainerHelpers.idealIntArraySize(int) -> u
+    int androidx.collection.ContainerHelpers.idealLongArraySize(int) -> v
+    int androidx.core.content.res.CamUtils.intFromLStar(float) -> w
+    float androidx.core.content.res.CamUtils.linearized(int) -> x
+    void com.google.android.material.animation.AnimatorSetCompat.playTogether(android.animation.AnimatorSet,java.util.List) -> y
+    void androidx.transition.ViewUtilsBase.saveNonTransitionAlpha(android.view.View) -> z
 com.google.android.material.shape.MaterialShapeDrawable -> c2.f:
     android.graphics.Paint clearPaint -> z
     com.google.android.material.shape.ShapeAppearancePathProvider$PathListener pathShadowListener -> r
@@ -26790,7 +26788,7 @@ com.google.android.material.shape.RelativeCornerSize -> c2.g:
     float percent -> a
     float getCornerSize(android.graphics.RectF) -> a
 com.google.android.material.shape.RoundedCornerTreatment -> c2.h:
-    void getCornerPath(com.google.android.material.shape.ShapePath,float,float,float) -> n
+    void getCornerPath(com.google.android.material.shape.ShapePath,float,float,float) -> i
 com.google.android.material.shape.ShapeAppearanceModel -> c2.i:
     com.google.android.material.shape.CornerSize bottomLeftCornerSize -> h
     com.google.android.material.shape.CornerSize topRightCornerSize -> f
@@ -29438,14 +29436,6 @@ com.google.android.material.transformation.FabTransformationSheetBehavior -> com
 com.google.android.material.transformation.TransformationChildCard -> i2.a:
 com.google.android.material.transformation.TransformationChildLayout -> i2.b:
 d1.MainActivity$$ExternalSyntheticLambda0 -> d1.a:
-# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
-# {"id":"com.android.tools.r8.synthesized"}
-    com.freebrio.robustdemo.MainActivity com.freebrio.robustdemo.MainActivity$$InternalSyntheticLambda$0$d8e8f2deb1ef46930abfe0c98795679e0b02c1a15ab3b7ee0fdacb27a0ab5b28$1.f$0 -> b
-    void com.freebrio.robustdemo.MainActivity$$InternalSyntheticLambda$0$d8e8f2deb1ef46930abfe0c98795679e0b02c1a15ab3b7ee0fdacb27a0ab5b28$1.<init>(com.freebrio.robustdemo.MainActivity) -> <init>
-      # {"id":"com.android.tools.r8.synthesized"}
-    void com.freebrio.robustdemo.MainActivity$$InternalSyntheticLambda$0$d8e8f2deb1ef46930abfe0c98795679e0b02c1a15ab3b7ee0fdacb27a0ab5b28$1.onClick(android.view.View) -> onClick
-      # {"id":"com.android.tools.r8.synthesized"}
-d1.MainActivity$$ExternalSyntheticLambda1 -> d1.b:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     com.freebrio.robustdemo.MainActivity com.freebrio.robustdemo.MainActivity$$InternalSyntheticLambda$0$d8e8f2deb1ef46930abfe0c98795679e0b02c1a15ab3b7ee0fdacb27a0ab5b28$0.f$0 -> b

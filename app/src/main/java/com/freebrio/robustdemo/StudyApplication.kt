@@ -1,6 +1,10 @@
 package com.freebrio.robustdemo
 
 import android.app.Application
+import android.util.Log
+import com.meituan.robust.Patch
+import com.meituan.robust.PatchExecutor
+import com.meituan.robust.RobustCallBack
 import com.xdf.studypatch.facade.StudyRobust
 import com.xdf.studypatch.model.PatchBean
 
@@ -16,5 +20,36 @@ class StudyApplication : Application() {
 //        val patch = PatchBean("3.1.0", "xxxx", "https://ucanos.xdf.cn/troy/android/tbs_core_046421_20230421111403_nolog_fs_obfs_arm64-v8a_release.tbs")
         val patch = PatchBean("1。0", "xxxx", "http://192.168.0.107:8080/file")
         StudyRobust.init(this, patch, "com.freebrio.robustdemo")
+        loadPatch()
+    }
+
+    private fun loadPatch() {
+        PatchExecutor(this, PatchManipulateImp(), object : RobustCallBack {
+            override fun onPatchListFetched(
+                result: Boolean,
+                isNet: Boolean,
+                patches: MutableList<Patch>?
+            ) {
+
+            }
+
+            override fun onPatchFetched(result: Boolean, isNet: Boolean, patch: Patch?) {
+                Log.d("swt", "onPatchFetched")
+            }
+
+            override fun onPatchApplied(result: Boolean, patch: Patch?) {
+                Log.d("swt", "onPatchApplied")
+            }
+
+            override fun logNotify(log: String?, where: String?) {
+                Log.d("swt", "logNotify")
+
+            }
+
+            override fun exceptionNotify(throwable: Throwable?, where: String?) {
+                Log.d("swt", "exceptionNotify")
+            }
+
+        }).start()
     }
 }

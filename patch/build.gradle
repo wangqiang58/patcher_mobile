@@ -30,8 +30,8 @@ configurations.all {
     resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
 }
 dependencies {
-    implementation "com.meituan.robust:autopatchbase:${VERSION_NAME}"
-//    implementation project(':autopatchbase')
+//    implementation "com.meituan.robust:autopatchbase:${VERSION_NAME}"
+    implementation project(':autopatchbase')
 }
 
 apply from: "../uploadJar.gradle"
