@@ -34,7 +34,9 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10"
     implementation "com.squareup.okhttp3:okhttp:3.14.9"
-    implementation project(":patch")
+//    implementation project(":patch")
+    implementation 'com.meituan.robust:patch:0.5.38'
+
 }
 
 

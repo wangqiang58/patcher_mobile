@@ -14,6 +14,11 @@ import java.nio.ByteBuffer
 import java.nio.ByteOrder
 import kotlin.experimental.and
 
+/**
+@author: wangqiang
+@date: 2023/8/5
+@desc:
+ */
 object FileUtils {
     private const val TAG = "FileUtil"
 

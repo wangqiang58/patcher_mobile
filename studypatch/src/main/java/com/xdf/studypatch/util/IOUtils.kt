@@ -7,6 +7,11 @@ import android.text.TextUtils
 import android.util.Log
 import java.io.*
 
+/**
+@author: wangqiang
+@date: 2023/8/5
+@desc:
+ */
 object IOUtils {
     private const val TAG = "IOUtils"
 

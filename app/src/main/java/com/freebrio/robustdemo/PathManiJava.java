@@ -15,7 +15,7 @@ import java.util.List;
  * email：wentao.sun@freebrio.com
  * data: 2021/04/25
  */
-class PathManiJava extends PatchManipulate {
+class  PathManiJava extends PatchManipulate {
     @Override
     protected List<Patch> fetchPatchList(Context context) {
         Patch patch = new Patch();

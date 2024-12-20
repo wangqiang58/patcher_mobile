@@ -3,7 +3,11 @@ package com.xdf.studypatch.util
 import androidx.annotation.NonNull
 import androidx.annotation.Nullable
 import android.util.Base64
-
+/**
+@author: wangqiang
+@date: 2023/8/5
+@desc:
+ */
 object Base64Utils {
     private const val DEFAULT_FLAG = Base64.DEFAULT or Base64.NO_WRAP
 

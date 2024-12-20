@@ -68,11 +68,11 @@ dependencies {
     implementation 'io.reactivex.rxjava3:rxjava:3.0.5'
     implementation 'com.android.support:multidex:1.0.3'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10"
-    implementation 'com.meituan.robust:studypatch:1.0.13'
+//    implementation 'com.meituan.robust:studypatch:1.0.13'
 
 
     implementation 'org.javassist:javassist:3.24.0-GA'
-//    implementation project(path: ':patch')
+    implementation project(path: ':studypatch')
     implementation 'com.meituan.robust:patch:0.5.38'
     implementation "com.meituan.robust:autopatchbase:${VERSION_NAME}"
 

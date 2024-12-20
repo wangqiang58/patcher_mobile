@@ -18,8 +18,8 @@ class PatchManipulateImp : PatchManipulate() {
         val patch = Patch()
         patch.name = "test"
         patch.localPath =
-            context.externalCacheDir?.absolutePath + File.separator + "robust" + File.separator + "patch"
-        Log.d("robust","patch localpath=${patch.localPath}")
+            context.filesDir.path + File.separator + "robust" + File.separator + "patch"
+        Log.d("robust", "patch localpath=${patch.localPath}")
         patch.patchesInfoImplClassFullName = "com.freebrio.robustdemo.PatchesInfoImpl"
         val list = arrayListOf<Patch>()
         list.add(patch)
