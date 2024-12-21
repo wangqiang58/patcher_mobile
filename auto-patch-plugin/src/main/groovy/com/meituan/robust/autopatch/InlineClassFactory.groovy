@@ -30,11 +30,11 @@ class InlineClassFactory {
         //pay attention to order
         Set usedClass = new HashSet();
         usedClass.addAll(Config.newlyAddedClassNameList);
-        Set newlyAddedClassInlineSet = getAllInlineClasses(usedClass, null);
-        usedClass.addAll(newlyAddedClassInlineSet);
+        //Set newlyAddedClassInlineSet = getAllInlineClasses(usedClass, null);
+        //usedClass.addAll(newlyAddedClassInlineSet);
         usedClass.addAll(Config.modifiedClassNameList)
         Set inLineClassNameSet = getAllInlineClasses(usedClass, Config.patchMethodSignatureSet);
-        inLineClassNameSet.removeAll(newlyAddedClassInlineSet)
+       // inLineClassNameSet.removeAll(newlyAddedClassInlineSet)
         inLineClassNameSet.addAll(classInLineMethodsMap.keySet())
         //all inline patch class
         createHookInlineClass(inLineClassNameSet)

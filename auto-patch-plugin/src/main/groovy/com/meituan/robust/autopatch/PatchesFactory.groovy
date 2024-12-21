@@ -111,7 +111,7 @@ class PatchesFactory {
                                         return;
                                     } else {
                                         //非静态方法中实例化需要替换this。
-                                       // e.replace(ReflectUtils.instanceReplaceThis())
+                                        e.replace(ReflectUtils.instanceReplaceThis())
                                         return;
                                     }
                                 }
@@ -122,6 +122,7 @@ class PatchesFactory {
                                     }
                                 } catch (NotFoundException e1) {
                                     e1.printStackTrace();
+                                    return;
                                 }
 
                                 e.replace(ReflectUtils.getCreateClassString(e, getClassValue(e.getClassName()), temPatchClass.getName(), ReflectUtils.isStatic(method.getModifiers())));
