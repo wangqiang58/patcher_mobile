@@ -49,8 +49,8 @@ object StudyRobust {
      * @description 加载patch
      * @param
      * @return
-     * @author hujianqiang
-     * @time 2021/8/5 11:20 上午
+     * @author wangqiang
+     * @time 2023/8/5 11:20 上午
      */
     private fun localPatch(context: Context, patchBean: PatchBean) {
         val localPatchVersion = PatchHistoryUtil.localPatchVersion()

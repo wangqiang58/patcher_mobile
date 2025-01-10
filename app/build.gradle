@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.application'
-   // id 'auto-patch-plugin'
-    id 'robust'
+    id 'auto-patch-plugin'
+   // id 'robust'
     id 'kotlin-android'
 }
 
