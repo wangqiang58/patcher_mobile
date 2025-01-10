@@ -12,25 +12,26 @@ import com.meituan.robust.patch.annotaion.Modify
 class MainActivity : AppCompatActivity() {
     lateinit var textView: TextView
 
-    @Modify
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         textView = findViewById(R.id.content_tv)
 
-        findViewById<Button>(R.id.btn).setOnClickListener(FixOnclick(this@MainActivity))
-    }
-
-    @Add
-    class FixOnclick(var activity: MainActivity) : View.OnClickListener {
-        override fun onClick(v: View?) {
-            activity.findViewById<Button>(R.id.btn).text = "修改后11"
+        findViewById<Button>(R.id.btn).setOnClickListener {
+            setText()
         }
-
-
     }
+
+//    @Add
+//    class FixOnclick(var activity: MainActivity) : View.OnClickListener {
+//        override fun onClick(v: View?) {
+//            activity.findViewById<Button>(R.id.btn).text = "修改后11"
+//        }
+//
+//
+//    }
 
     fun setText() {
-        findViewById<Button>(R.id.btn).text = "修改后1"
+        findViewById<Button>(R.id.btn).text = "修改前"
     }
 }
